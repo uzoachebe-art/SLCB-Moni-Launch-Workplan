@@ -1,5 +1,10 @@
 import { Activity } from "../types";
 
+// AAARRR stage tags are applied only within Asset Production & Rollout and Campaign Execution
+// Support — the two workstreams carrying granular, customer-facing execution actions — per Uzo's
+// instruction (2026-09-15). Research, GTM Strategy, MarComms Development, and Creative Ideation are
+// upstream strategy/planning work and carry no AAARRR tags.
+
 export const ACTIVITIES: Activity[] = [
   // ---- Month 1 (Sep 2026): Research, GTM Strategy, MarComms Planning, Creative Ideation ----
   {
@@ -13,9 +18,9 @@ export const ACTIVITIES: Activity[] = [
       "Localization & Cultural Insight Brief (trust-building mechanisms, community validation, linguistic norms)",
     ],
     governingStakeholders: "Execution Partner Strategy Team & Integra Sys",
-    start: "2026-09-01",
+    start: "2026-09-15",
     end: "2026-09-30",
-    aaarrr: ["awareness", "acquisition"],
+    aaarrr: [],
     monthLabel: "Month 1 - Sep 2026",
   },
   {
@@ -29,9 +34,9 @@ export const ACTIVITIES: Activity[] = [
       "Operational Phasing & Governance Schedule (milestones, approval gates, RACI matrices)",
     ],
     governingStakeholders: "Execution Partner, Integra, & SLCB Leadership",
-    start: "2026-09-01",
+    start: "2026-09-15",
     end: "2026-09-30",
-    aaarrr: ["awareness", "acquisition", "activation", "revenue"],
+    aaarrr: [],
     dependsOn: ["ws1-research"],
     monthLabel: "Month 1 - Sep 2026",
   },
@@ -45,9 +50,9 @@ export const ACTIVITIES: Activity[] = [
       "Krio-Language Validation Workflow (formal review with Head of Digital Banking & Financial Inclusion)",
     ],
     governingStakeholders: "Execution Partner Creative & Head of Digital Banking",
-    start: "2026-09-01",
+    start: "2026-09-15",
     end: "2026-09-30",
-    aaarrr: ["awareness", "acquisition", "activation"],
+    aaarrr: [],
     dependsOn: ["ws1-research"],
     flags: [
       { type: "assumed", note: "Krio-Language Validation Workflow names the Head of Digital Banking & Financial Inclusion (Mary Magdalene Deen) as approver, per the source document — formal sign-off must complete before any Krio-language production run." },
@@ -65,9 +70,9 @@ export const ACTIVITIES: Activity[] = [
       "Brand Ambassador Integration Frameworks (maximizing Suad Baydoun's authenticity/reach)",
     ],
     governingStakeholders: "Execution Partner Creative Director & Suad Baydoun Management",
-    start: "2026-09-01",
+    start: "2026-09-15",
     end: "2026-09-30",
-    aaarrr: ["awareness", "referral"],
+    aaarrr: [],
     dependsOn: ["ws1-research"],
     monthLabel: "Month 1 - Sep 2026",
   },
@@ -115,7 +120,7 @@ export const ACTIVITIES: Activity[] = [
     governingStakeholders: "Execution Partner Creative & Head of Digital Banking (jointly with GTM Strategy per source Scopes 2 & 3)",
     start: "2026-10-05",
     end: "2026-10-31",
-    aaarrr: ["awareness", "acquisition", "activation"],
+    aaarrr: [],
     dependsOn: ["ws3-planning", "ws2-gtm-plan", "ws6-bsl-clearance", "ws5-asset-production"],
     flags: [
       { type: "conflict", note: "Source document's own Month 2 narrative labels this 'Official Product Launch' under joint 'Scopes 2 & 3' (GTM Strategy + MarComms) — represented here once, in the MarComms lane, with an explicit dependency back to ws2-gtm-plan rather than duplicated across both lanes." },
@@ -146,7 +151,7 @@ export const ACTIVITIES: Activity[] = [
     governingStakeholders: "Execution Partner Creative & Head of Digital Banking (jointly with Asset Production per source Scopes 3 & 5)",
     start: "2026-11-01",
     end: "2026-11-30",
-    aaarrr: ["acquisition", "retention"],
+    aaarrr: [],
     dependsOn: ["ws3-launch-execution"],
     monthLabel: "Month 3 - Nov 2026",
   },
@@ -183,7 +188,7 @@ export const ACTIVITIES: Activity[] = [
     governingStakeholders: "Execution Partner, Integra, & SLCB Leadership",
     start: "2026-11-01",
     end: "2026-11-30",
-    aaarrr: ["activation", "retention", "revenue"],
+    aaarrr: [],
     dependsOn: ["ws2-gtm-plan"],
     flags: [
       { type: "assumed", note: "Tracks the Q4 interim milestone (7,500-9,000 active users) alongside — not instead of — the Year-1 target (30,000 active users)." },
@@ -205,19 +210,24 @@ export const ACTIVITIES: Activity[] = [
     monthLabel: "Month 3 - Nov 2026",
   },
 
-  // ---- Month 4 (Dec 2026): Retention, Optimisation, Strategic Handover ----
+  // ---- Month 4 (Dec 2026) onward: Retention, Optimisation, Strategic Handover — open-ended into Q1 2027 ----
   {
     id: "ws6-retention-handover",
     workstream: "execution-support",
     title: "Retention, Optimisation & Strategic Handover",
+    deliverables: [
+      "Lifecycle marketing, push notifications, optimised paid retargeting (ongoing)",
+      "Final campaign performance report vs. programme KPIs",
+      "Q1 2027 handover documentation and recommendations",
+    ],
     governingStakeholders: "Execution Partner, Integra, SLCB, & BSL Regulators",
     start: "2026-12-01",
-    end: "2026-12-31",
+    end: "2027-01-31",
     aaarrr: ["retention", "referral", "revenue"],
     dependsOn: ["ws6-field-activation", "ws6-midflight-review"],
     flags: [
       { type: "uzo-to-confirm", note: "Source document frames all of December as Month 4 retention/handover under the single October launch. Under Uzo's Soft/Main split, does retention activity begin immediately after Soft Launch (mid-Oct) and this December phase represent a second wave tied to Main Launch, or does retention genuinely wait until Main Launch as shown? Shown here starting at Main Launch per the source's own Month 4 dating — flagged for confirmation." },
     ],
-    monthLabel: "Month 4 - Dec 2026",
+    monthLabel: "Month 4 - Dec 2026, ongoing into Q1 2027",
   },
 ];

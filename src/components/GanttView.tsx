@@ -12,8 +12,8 @@ const COL_WIDTH = 130; // px per month (wider — only a 4-month window)
 const ROW_HEIGHT = 44;
 const LABEL_WIDTH = 220;
 
-const GRID_START = { year: 2026, month: 8 }; // September 2026
-const GRID_END = { year: 2026, month: 11 }; // December 2026
+const GRID_START = { year: 2026, month: 8 }; // September 2026 (bars start mid-month, from the 15th)
+const GRID_END = { year: 2027, month: 0 }; // January 2027 — the grid is open-ended beyond this, not a hard stop
 
 function packRows(activities: Activity[]): { activity: Activity; row: number }[] {
   const sorted = [...activities].sort((a, b) => a.start.localeCompare(b.start));
@@ -70,8 +70,8 @@ export function GanttView({
   return (
     <div className="border border-gray-200 rounded-lg bg-white overflow-hidden">
       <div className="px-3 py-2 text-xs text-gray-500 bg-gray-50 border-b border-gray-200">
-        Sep–Dec 2026 — the Execution Partner proposal&apos;s own 4-month execution window. Bars sharing a
-        row do not overlap in time; the ⛓ icon marks an activity gated on another.
+        15 Sep 2026 onward — ongoing, not capped at the Execution Partner proposal&apos;s nominal 4-month
+        window. Bars sharing a row do not overlap in time; the ⛓ icon marks an activity gated on another.
       </div>
       <div className="flex">
         <div style={{ width: LABEL_WIDTH, flexShrink: 0 }} className="border-r border-gray-200">
@@ -98,6 +98,16 @@ export function GanttView({
                   {MONTH_LABELS[m.month]} {m.year}
                 </div>
               ))}
+            </div>
+
+            {/* Open-ended marker — the programme continues beyond this grid, not a hard stop */}
+            <div
+              className="absolute top-0 bottom-0 z-20 pointer-events-none border-l-2 border-dashed border-gray-400"
+              style={{ left: gridWidth - 1 }}
+            >
+              <div className="absolute top-8 text-[10px] font-semibold px-1.5 py-0.5 rounded whitespace-nowrap bg-gray-600 text-white">
+                ongoing →
+              </div>
             </div>
 
             {milestonePositions.map((m) => (
@@ -189,13 +199,20 @@ function ActivityDetail({ activity, onClose }: { activity: Activity; onClose: ()
         )}
         <div className="mt-3">
           <div className="text-xs font-semibold text-gray-700">AAARRR stage(s)</div>
-          <div className="flex flex-wrap gap-1 mt-1">
-            {activity.aaarrr.map((s) => (
-              <span key={s} className="text-[10px] font-medium bg-navy-50 text-navy px-1.5 py-0.5 rounded">
-                {AAARRR_META[s].label} · {AAARRR_META[s].priority}
-              </span>
-            ))}
-          </div>
+          {activity.aaarrr.length > 0 ? (
+            <div className="flex flex-wrap gap-1 mt-1">
+              {activity.aaarrr.map((s) => (
+                <span key={s} className="text-[10px] font-medium bg-navy-50 text-navy px-1.5 py-0.5 rounded">
+                  {AAARRR_META[s].label} · {AAARRR_META[s].priority}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <div className="text-xs text-gray-400 mt-1">
+              Not applicable — AAARRR tags apply only within Asset Production &amp; Rollout and Campaign
+              Execution Support.
+            </div>
+          )}
         </div>
         <FlagBadgeRow flags={activity.flags} />
       </div>

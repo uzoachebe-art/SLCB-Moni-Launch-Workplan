@@ -58,3 +58,29 @@ assumptions are otherwise transcribed as written, not reworded.
 
 - Repo visibility: public.
 - Vercel account: same as the prior SLCB Moni Master Workplan build (`uzoachebe-5536`).
+
+## Post-launch revisions (2026-09-15, in chat, after first deploy)
+
+1. **Header simplified** — removed the subtitle paragraph, the stats line, and the amber
+   "restates, does not originate" banner from the page top, per Uzo's request to show just the main
+   H1. The BTV-not-approved disclosure is not deleted — it remains in the Legend (present on both
+   Gantt and Matrix views: "Launch milestone (Uzo's addition — not in source proposal)"), on the
+   milestone objects' own `note` fields, and here in SOURCES.md. Compliance director's own criterion
+   only required authorship/lineage be preserved "even if not in the Exco-facing UI itself."
+2. **Workstream labels corrected** to match the source's own Execution Framework & Workstream Matrix
+   (§14) naming exactly: Research & Analysis / GTM Strategy & Planning / MarComms Campaign Development
+   / Creative Concept & Ideation / Asset Production & Rollout / Campaign Execution Support. The lane
+   order was already correct; only the longer scope-section labels used in the first build have been
+   swapped for the matrix's own shorter names. Matrix/Table view's default sort now follows this same
+   proposal order (fixed from alphabetical, which had been silently reordering it).
+3. **Timeline start moved to 15 Sep 2026** (from 1 Sep) and the grid is no longer capped at 31 Dec
+   2026 — it renders through Jan 2027 with an "ongoing →" open-ended marker at the right edge, since
+   the source's own Month 4 deliverable text extends into "Q1 2027 handover documentation." Added that
+   handover deliverable explicitly to `ws6-retention-handover`, extending its end date to 2027-01-31.
+4. **AAARRR tags scoped to Asset Production & Rollout and Campaign Execution Support only**, per
+   Uzo's instruction that the framework only makes sense for granular, customer-facing execution
+   actions — not upstream strategy/planning work. Research & Analysis, GTM Strategy & Planning,
+   MarComms Campaign Development, and Creative Concept & Ideation activities now carry `aaarrr: []`.
+   This is a deliberate narrowing of the earlier "AAARRR mandatory on every workstream" instruction
+   from the original brief — the newer, more specific instruction governs. Filter logic updated so an
+   untagged activity is never hidden by the AAARRR filter (empty array always passes).

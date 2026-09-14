@@ -1,12 +1,13 @@
 import { Workstream, Milestone } from "./types";
 
+// Order and labels match the source proposal's own Execution Framework & Workstream Matrix (section 14) exactly.
 export const WORKSTREAMS: Workstream[] = [
   { id: "research-analysis", label: "Research & Analysis", shortLabel: "Research", color: "#1B2A6B", colorSoft: "#E3E7F5" },
   { id: "gtm-strategy", label: "GTM Strategy & Planning", shortLabel: "GTM Strategy", color: "#E2233B", colorSoft: "#FBE3E7" },
-  { id: "marcomms-development", label: "Multi-Channel MarComms Development", shortLabel: "MarComms", color: "#0F7A3D", colorSoft: "#E1F3E8" },
+  { id: "marcomms-development", label: "MarComms Campaign Development", shortLabel: "MarComms", color: "#0F7A3D", colorSoft: "#E1F3E8" },
   { id: "creative-ideation", label: "Creative Concept & Ideation", shortLabel: "Creative Ideation", color: "#B8860B", colorSoft: "#F7EDD9" },
-  { id: "asset-production", label: "Creative Campaign Assets & Content Production", shortLabel: "Asset Production", color: "#5B3A8E", colorSoft: "#EBE3F3" },
-  { id: "execution-support", label: "Campaign Execution Support & Digital Amplification", shortLabel: "Execution Support", color: "#0E7C86", colorSoft: "#DFF1F2" },
+  { id: "asset-production", label: "Asset Production & Rollout", shortLabel: "Asset Production", color: "#5B3A8E", colorSoft: "#EBE3F3" },
+  { id: "execution-support", label: "Campaign Execution Support", shortLabel: "Execution Support", color: "#0E7C86", colorSoft: "#DFF1F2" },
 ];
 
 export const MILESTONES: Milestone[] = [
@@ -28,5 +29,5 @@ export const MILESTONES: Milestone[] = [
   },
 ];
 
-export const PROGRAMME_START = "2026-09-01";
-export const PROGRAMME_END = "2026-12-31";
+export const PROGRAMME_START = "2026-09-15";
+export const PROGRAMME_END = "2027-01-31"; // open-ended: Q1 2027 handover per source Month-4 deliverable; grid renders with an "ongoing" marker, not a hard stop

@@ -18,16 +18,19 @@ export function MatrixView({
   const [sortKey, setSortKey] = useState<SortKey>("workstream");
   const [sortAsc, setSortAsc] = useState(true);
   const wsMap = useMemo(() => Object.fromEntries(workstreams.map((w) => [w.id, w])), [workstreams]);
+  // Proposal order (Research -> GTM -> MarComms -> Creative -> Asset Production -> Execution Support),
+  // not alphabetical — matches the source's own Execution Framework & Workstream Matrix sequence.
+  const wsOrder = useMemo(() => Object.fromEntries(workstreams.map((w, i) => [w.id, i])), [workstreams]);
 
   const sorted = useMemo(() => {
     const copy = [...activities];
     copy.sort((a, b) => {
+      if (sortKey === "workstream") {
+        const cmp = (wsOrder[a.workstream] ?? 0) - (wsOrder[b.workstream] ?? 0);
+        return sortAsc ? cmp : -cmp;
+      }
       let av: string, bv: string;
       switch (sortKey) {
-        case "workstream":
-          av = wsMap[a.workstream]?.label ?? "";
-          bv = wsMap[b.workstream]?.label ?? "";
-          break;
         case "start":
           av = a.start;
           bv = b.start;
@@ -40,7 +43,7 @@ export function MatrixView({
       return sortAsc ? cmp : -cmp;
     });
     return copy;
-  }, [activities, sortKey, sortAsc, wsMap]);
+  }, [activities, sortKey, sortAsc, wsOrder]);
 
   function toggleSort(key: SortKey) {
     if (sortKey === key) setSortAsc((s) => !s);
@@ -98,13 +101,17 @@ export function MatrixView({
                   </td>
                   <td className="px-3 py-2 text-gray-600">{a.governingStakeholders}</td>
                   <td className="px-3 py-2">
-                    <div className="flex flex-wrap gap-1">
-                      {a.aaarrr.map((s) => (
-                        <span key={s} className="text-[9px] font-bold bg-navy-50 text-navy px-1 rounded" title={AAARRR_META[s].priority}>
-                          {AAARRR_META[s].short}
-                        </span>
-                      ))}
-                    </div>
+                    {a.aaarrr.length > 0 ? (
+                      <div className="flex flex-wrap gap-1">
+                        {a.aaarrr.map((s) => (
+                          <span key={s} className="text-[9px] font-bold bg-navy-50 text-navy px-1 rounded" title={AAARRR_META[s].priority}>
+                            {AAARRR_META[s].short}
+                          </span>
+                        ))}
+                      </div>
+                    ) : (
+                      <span className="text-gray-300">—</span>
+                    )}
                   </td>
                 </tr>
               );
@@ -130,11 +137,13 @@ export function MatrixView({
               )}
               <div className="text-xs text-gray-600 mt-2">{formatDate(a.start)} → {formatDate(a.end)} <span className="text-gray-400">({a.monthLabel})</span></div>
               <div className="text-xs text-gray-500 mt-1">Governing: {a.governingStakeholders}</div>
-              <div className="flex flex-wrap gap-1 mt-1.5">
-                {a.aaarrr.map((s) => (
-                  <span key={s} className="text-[9px] font-bold bg-navy-50 text-navy px-1 rounded">{AAARRR_META[s].short}</span>
-                ))}
-              </div>
+              {a.aaarrr.length > 0 && (
+                <div className="flex flex-wrap gap-1 mt-1.5">
+                  {a.aaarrr.map((s) => (
+                    <span key={s} className="text-[9px] font-bold bg-navy-50 text-navy px-1 rounded">{AAARRR_META[s].short}</span>
+                  ))}
+                </div>
+              )}
               <FlagBadgeRow flags={a.flags} />
             </div>
           );
