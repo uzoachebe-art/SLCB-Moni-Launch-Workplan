@@ -51,22 +51,6 @@ export default function Home() {
         {view === "gantt" && <GanttView activities={filtered} workstreams={visibleWorkstreams} />}
         {view === "matrix" && <MatrixView activities={filtered} workstreams={visibleWorkstreams} />}
         {view === "risks" && <RiskView risks={RISKS} assumptions={ASSUMPTIONS} />}
-
-        <footer className="pt-6 text-xs text-gray-400 space-y-1">
-          <p>
-            Palette (Navy {"#1B2A6B"} / Red {"#E2233B"} / White) matches SLCB&apos;s current documented
-            palette, pending final Brand Bible sign-off.
-          </p>
-          <p>
-            Interim milestone: 7,500–9,000 active users by end of Q4 2026, tracked toward the Year-1 target
-            of 30,000 active Moni Wallet users by Month 12 — always shown together, never one without the other.
-          </p>
-          <p>
-            AAARRR stage tags apply only within Asset Production &amp; Rollout and Campaign Execution
-            Support, where the granular customer-facing actions sit — not on upstream strategy/planning
-            work.
-          </p>
-        </footer>
       </div>
     </main>
   );
