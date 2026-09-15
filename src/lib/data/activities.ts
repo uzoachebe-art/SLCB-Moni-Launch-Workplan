@@ -30,7 +30,7 @@ export const ACTIVITIES: Activity[] = [
     deliverables: [
       "Comprehensive 4-Month GTM Master Plan (Sep pre-launch acceleration -> Oct launch -> Nov-Dec scaling/retention)",
       "AAARRR Growth Architecture Blueprint",
-      "Quantitative Milestone & KPI Framework (path to 30,000 Year-1 target, incl. 7,500-9,000 Q4 milestone)",
+      "Quantitative Milestone & KPI Framework (Year-1 target with an interim Q4 milestone checkpoint)",
       "Operational Phasing & Governance Schedule (milestones, approval gates, RACI matrices)",
     ],
     governingStakeholders: "Execution Partner, Integra, & SLCB Leadership",
@@ -191,7 +191,7 @@ export const ACTIVITIES: Activity[] = [
     aaarrr: [],
     dependsOn: ["ws2-gtm-plan"],
     flags: [
-      { type: "assumed", note: "Tracks the Q4 interim milestone (7,500-9,000 active users) alongside — not instead of — the Year-1 target (30,000 active users)." },
+      { type: "assumed", note: "Tracks the Q4 interim milestone alongside — not instead of — the Year-1 target. Figures intentionally not shown here; no target has been validated." },
     ],
     monthLabel: "Month 3 - Nov 2026",
   },
