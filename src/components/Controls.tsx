@@ -3,13 +3,14 @@
 import { AaarrrStage, Workstream } from "@/lib/types";
 import { AAARRR_META, AAARRR_ORDER } from "@/lib/aaarrrMeta";
 
-export type ViewMode = "gantt" | "matrix" | "risks";
+export type ViewMode = "gantt" | "matrix" | "risks" | "pm";
 
 export function ViewToggle({ view, onChange }: { view: ViewMode; onChange: (v: ViewMode) => void }) {
   const opts: { key: ViewMode; label: string }[] = [
     { key: "gantt", label: "Gantt / Timeline" },
     { key: "matrix", label: "Matrix / Table" },
     { key: "risks", label: "Risks & Assumptions" },
+    { key: "pm", label: "Project Management" },
   ];
   return (
     <div className="inline-flex rounded-lg border border-gray-300 bg-white p-0.5 text-sm flex-wrap">

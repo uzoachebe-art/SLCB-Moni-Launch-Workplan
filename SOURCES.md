@@ -1,10 +1,47 @@
 # Source provenance (internal — not rendered in the app)
 
-Single source: the Execution Partner (Beyond The Visual) × Integra Sys SLCB Moni Wallet Scope of Work,
-"Scope of Work, Strategic Approach, and Plan of Action," dated 17 August 2026, published at
-`slcbmoniproposal.netlify.app`. Every "BTV" reference in the original is relabelled "Execution Partner"
-in this app's UI per Uzo's instruction (2026-09-15) — the underlying scope, deliverables, risks, and
-assumptions are otherwise transcribed as written, not reworded.
+Primary source (Gantt, Matrix, Risks & Assumptions tabs): the Execution Partner (Beyond The Visual) ×
+Integra Sys SLCB Moni Wallet Scope of Work, "Scope of Work, Strategic Approach, and Plan of Action,"
+dated 17 August 2026, published at `slcbmoniproposal.netlify.app`. Every "BTV" reference in the
+original is relabelled "Execution Partner" in this app's UI per Uzo's instruction (2026-09-15) — the
+underlying scope, deliverables, risks, and assumptions are otherwise transcribed as written, not
+reworded.
+
+Second source (Project Management tab only, added 2026-09-16): `SLCB_Moni_18Month_Campaign_v2.pptx`
+— "Watch It Grow," the 18-month campaign architecture using the TBWA Disruption® strategic framework,
+prepared by Uzo Achebe, dated September 2026 (25 slides). Slides 13-24 used: Channel Strategy, Phase
+Overview, Phases 0-4 detail, 18-Month Rollout Calendar, Activities & Materials, Partnerships,
+Measurement Framework, Evaluation Cadence. BTV appears here too, named as Strategic Creative Agency
+"(pre-award)" — relabelled "Execution Partner" for consistency with the rest of this app.
+
+## Project Management tab — what was deliberately left out, per instruction
+
+- **No dates or phase durations shown anywhere in this tab** (no "Month 1-3," no "18-month" framing) —
+  per Uzo's instruction that mixing this campaign's longer horizon with the Gantt tab's Sep 2026-onward
+  window would confuse a reader. Phase names (Foundation & Proof, Ignition Launch, Amplification,
+  Deepening, Dominance) are kept as section headers since they carry no date information themselves.
+- **No monetary or KPI-count figures at all** — not flagged `[PROPOSED]`, excluded outright, per
+  instruction ("no budget has been validated, so target figures could be detrimental"). This is a
+  broader exclusion than the Gantt/Matrix tabs (which already excluded budget and headline KPI
+  figures) — extended here to cover every prize amount (Biznis Di Move, Mama Sabi Sabi, education
+  prize, referral bonuses), every growth-KPI count (active users, merchants, agents, followers,
+  conversations), and every rating/NPS target in the source deck's slide 23 KPI table and elsewhere.
+  Where a figure was load-bearing to the task description (e.g., an agent referral bonus), the task
+  is described without the amount and flagged `DATA REQUIRED` noting the amount is pending
+  confirmation.
+- Two internal date inconsistencies in the source deck itself are flagged without reproducing the
+  actual target counts: the merchant-QR network milestone is dated differently in the evidence
+  register/closing slide vs. the KPI table; the 700-agent milestone is dated differently on slide 17
+  vs. the KPI table on slide 23. Neither is resolved — both are flagged on the Phase 3 KPI Checkpoint
+  item.
+- The user's own supplied Pre-Launch bullet list was reconciled against the deck's own Phase 0
+  sections: the four Agent items are near-verbatim matches to the deck's existing "Agent Network
+  Readiness" block (not duplicated — the deck's own phrasing is used as canonical). The six Internal
+  Comms items (t-shirts, branch internal branding, intranet/display screens, staff email/WhatsApp
+  broadcast, WhatsApp display-profile mandate, HQ wall drape) are genuinely new — not present under
+  any heading in the source deck — and were added as their own "Internal Comms" section under Phase 0.
+- AAARRR tags are mandatory on every item in this tab (unlike the Gantt/Matrix tabs, where tags are
+  scoped to only two of the six BTV workstreams) — per Uzo's explicit instruction for this addition.
 
 ## What was extracted, verbatim or structurally faithful
 

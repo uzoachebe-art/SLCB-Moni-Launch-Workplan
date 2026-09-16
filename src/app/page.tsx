@@ -7,6 +7,8 @@ import { AaarrrStage } from "@/lib/types";
 import { GanttView } from "@/components/GanttView";
 import { MatrixView } from "@/components/MatrixView";
 import { RiskView } from "@/components/RiskView";
+import { ProjectManagementView } from "@/components/ProjectManagementView";
+import { PM_PHASES } from "@/lib/data/projectManagement";
 import { ViewToggle, ViewMode, WorkstreamFilter, AaarrrFilter, Legend } from "@/components/Controls";
 
 export default function Home() {
@@ -39,18 +41,20 @@ export default function Home() {
           <ViewToggle view={view} onChange={setView} />
         </div>
 
-        {view !== "risks" && (
+        {(view === "gantt" || view === "matrix") && (
           <div className="flex flex-col gap-2">
             <WorkstreamFilter workstreams={WORKSTREAMS} selected={selectedWs} onChange={setSelectedWs} />
             <AaarrrFilter selected={selectedAaarrr} onChange={setSelectedAaarrr} />
           </div>
         )}
+        {view === "pm" && <AaarrrFilter selected={selectedAaarrr} onChange={setSelectedAaarrr} />}
 
-        {view !== "risks" && <Legend />}
+        {(view === "gantt" || view === "matrix") && <Legend />}
 
         {view === "gantt" && <GanttView activities={filtered} workstreams={visibleWorkstreams} />}
         {view === "matrix" && <MatrixView activities={filtered} workstreams={visibleWorkstreams} />}
         {view === "risks" && <RiskView risks={RISKS} assumptions={ASSUMPTIONS} />}
+        {view === "pm" && <ProjectManagementView phases={PM_PHASES} selectedAaarrr={selectedAaarrr} />}
       </div>
     </main>
   );
