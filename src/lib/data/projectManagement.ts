@@ -115,12 +115,15 @@ export const PM_PHASES: PmPhase[] = [
         id: "p0-cultural",
         label: "Cultural & Copy Validation",
         items: [
-          { id: "p0-cult-1", text: "Contract and brief Krio cultural consultant on all campaign copy", aaarrr: ["awareness"] },
-          { id: "p0-cult-2", text: "Review all Krio-language campaign materials before production", aaarrr: ["awareness", "activation"], flags: [{ type: "assumed", note: "Krio validation gate — consistent with every prior source document reviewed for this programme. Approver not named in this deck; earlier sources name the Head of Digital Banking & Financial Inclusion." }] },
+          { id: "p0-cult-1", text: "Contract and brief Krio-Temne-Mende cultural consultant(s) on all campaign copy", aaarrr: ["awareness"] },
+          {
+            id: "p0-cult-2",
+            text: "Review all Krio-Temne-Mende-language campaign materials before production — Temne for Northern Province (Makeni), Mende for Southern/Eastern Province (Bo, Kenema); a straight Krio translation will not land as genuinely local in either region",
+            aaarrr: ["awareness", "activation"],
+            flags: [{ type: "assumed", note: "Krio-Temne-Mende-language validation gate — the Krio portion is consistent with every prior source document reviewed for this programme; Temne and Mende were added per Uzo's instruction (2026-09-16), reflecting the Phase 1 Research Diagnostic Report's regional-language findings. Approver not named in the 18-month campaign deck; earlier sources name the Head of Digital Banking & Financial Inclusion." }],
+          },
           { id: "p0-cult-3", text: "Run community listener focus groups across Freetown and secondary cities", aaarrr: ["awareness"] },
           { id: "p0-cult-4", text: "Lodge final approved copy master document with Marketing", aaarrr: ["awareness"] },
-          { id: "p0-cult-5", text: "Validate Temne-language versions of radio and activation copy for Northern Province (Makeni) — a straight Krio translation will not land as genuinely local", aaarrr: ["awareness"] },
-          { id: "p0-cult-6", text: "Validate Mende-language versions of radio and activation copy for Southern/Eastern Province (Bo, Kenema) — same reasoning as Temne for the North", aaarrr: ["awareness"] },
         ],
       },
       {
@@ -140,7 +143,7 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p0-reg-1", text: "Confirm BSL oversight arrangement for monthly prize draws, in writing", aaarrr: ["activation"] },
           { id: "p0-reg-2", text: "Legal review: confirm draw mechanics are not classified as a lottery under Sierra Leone law", aaarrr: ["activation"] },
           { id: "p0-reg-3", text: "Confirm KYC tiering for Moni accounts with BSL compliance team", aaarrr: ["activation"] },
-          { id: "p0-reg-4", text: "Finalise Moni Savings Circle terms & conditions (English + Krio, approved)", aaarrr: ["activation"] },
+          { id: "p0-reg-4", text: "Finalise Moni Savings Circle terms & conditions (English + Krio-Temne-Mende, approved)", aaarrr: ["activation"] },
         ],
       },
       {
@@ -148,7 +151,7 @@ export const PM_PHASES: PmPhase[] = [
         label: "Creative Production",
         items: [
           { id: "p0-creative-1", text: "Brief Execution Partner on 'Watch It Grow' campaign creative", aaarrr: ["awareness"], owner: "Execution Partner" },
-          { id: "p0-creative-2", text: "Record radio spots in English and Krio, pending final copy validation", aaarrr: ["awareness"], owner: "Execution Partner" },
+          { id: "p0-creative-2", text: "Record radio spots in English and Krio-Temne-Mende, pending final copy validation", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-3", text: "Complete social media content calendar, incl. ambassador content", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-4", text: "Print and install in-branch POS materials (Moni enrolment QR, Savings Circle display)", aaarrr: ["awareness", "acquisition"] },
         ],
@@ -175,7 +178,7 @@ export const PM_PHASES: PmPhase[] = [
         id: "p1-radio",
         label: "Radio",
         items: [
-          { id: "p1-radio-1", text: "'Watch It Grow' spot: English and Krio versions", aaarrr: ["awareness"], flags: [{ type: "assumed", note: "Marked [ASSUMED — unvalidated] in the source deck." }] },
+          { id: "p1-radio-1", text: "'Watch It Grow' spot: English and Krio-Temne-Mende versions", aaarrr: ["awareness"], flags: [{ type: "assumed", note: "Marked [ASSUMED — unvalidated] in the source deck, which specifies English and Krio only; Temne and Mende added per Uzo's instruction (2026-09-16)." }] },
           { id: "p1-radio-2", text: "Weekly Moni Savings Circle draw countdown spots", aaarrr: ["awareness", "retention"] },
           { id: "p1-radio-3", text: "Live first-draw broadcast — hosted special, prizes announced on air", aaarrr: ["awareness", "retention"] },
           { id: "p1-radio-4", text: "SLCB MD endorsement in opening-week radio editorial", aaarrr: ["awareness"] },

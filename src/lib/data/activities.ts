@@ -43,11 +43,11 @@ export const ACTIVITIES: Activity[] = [
   {
     id: "ws3-planning",
     workstream: "marcomms-development",
-    title: "MarComms Planning — media mix, content calendar, Krio validation setup",
+    title: "MarComms Planning — media mix, content calendar, Krio-Temne-Mende-Language validation setup",
     deliverables: [
       "Multi-Channel Media Mix Strategy",
       "Master Content & Deployment Calendar (mapped to brand ambassador Suad Baydoun's pre-approved utilization plan)",
-      "Krio-Language Validation Workflow (formal review with Head of Digital Banking & Financial Inclusion)",
+      "Krio-Temne-Mende-Language Validation Workflow (formal review with Head of Digital Banking & Financial Inclusion)",
     ],
     governingStakeholders: "Execution Partner Creative & Head of Digital Banking",
     start: "2026-09-15",
@@ -55,7 +55,7 @@ export const ACTIVITIES: Activity[] = [
     aaarrr: [],
     dependsOn: ["ws1-research"],
     flags: [
-      { type: "assumed", note: "Krio-Language Validation Workflow names the Head of Digital Banking & Financial Inclusion (Mary Magdalene Deen) as approver, per the source document — formal sign-off must complete before any Krio-language production run." },
+      { type: "assumed", note: "Krio-Temne-Mende-Language Validation Workflow names the Head of Digital Banking & Financial Inclusion (Mary Magdalene Deen) as approver, per the source document — formal sign-off must complete before any Krio-Temne-Mende-language production run. The source document itself only names Krio; Temne and Mende were added per Uzo's instruction (2026-09-16), reflecting the Phase 1 Research Diagnostic Report's finding that Northern and Southern/Eastern Province content needs its own language, not a Krio translation." },
     ],
     monthLabel: "Month 1 - Sep 2026",
   },
