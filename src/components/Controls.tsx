@@ -98,7 +98,7 @@ export function Legend() {
   return (
     <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-600">
       <span className="border-l border-gray-300 pl-0 sm:pl-4 flex items-center gap-1.5">
-        <span className="w-3 border-t-2 border-brandred inline-block" /> Launch milestone (Uzo&apos;s addition — not in source proposal)
+        <span className="w-3 border-t-2 border-brandred inline-block" /> Launch milestone
       </span>
       <span className="flex items-center gap-1">⛓ Has dependency</span>
       <span className="flex items-center gap-1">

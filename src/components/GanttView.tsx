@@ -70,8 +70,7 @@ export function GanttView({
   return (
     <div className="border border-gray-200 rounded-lg bg-white overflow-hidden">
       <div className="px-3 py-2 text-xs text-gray-500 bg-gray-50 border-b border-gray-200">
-        15 Sep 2026 onward — ongoing, not capped at the Execution Partner proposal&apos;s nominal 4-month
-        window. Bars sharing a row do not overlap in time; the ⛓ icon marks an activity gated on another.
+        Bars sharing a row do not overlap in time; the ⛓ icon marks an activity gated on another.
       </div>
       <div className="flex">
         <div style={{ width: LABEL_WIDTH, flexShrink: 0 }} className="border-r border-gray-200">
