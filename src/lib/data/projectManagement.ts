@@ -30,6 +30,51 @@ export interface PmPhase {
 
 export const PM_PHASES: PmPhase[] = [
   {
+    id: "brand-foundation",
+    label: "Brand Foundation — Gate 01",
+    intro: "The brand purpose, positioning, values, and audience architecture that every subsequent campaign asset must trace back to.",
+    sections: [
+      {
+        id: "bf-approval",
+        label: "Brand Platform Sign-Off",
+        items: [
+          {
+            id: "bf-approval-6",
+            text: "Close Gate 01 (Brand Platform sign-off) in writing before any visual identity or creative design work begins",
+            aaarrr: ["activation"],
+            owner: "SLCB Leadership",
+            flags: [{ type: "conflict", note: "Hard gate, per the source document's own header ('nothing visual is designed until this gate closes') — this should block the Creative Production items in Phase 0 below, not just precede them on paper." }],
+          },
+        ],
+      },
+      {
+        id: "bf-values",
+        label: "Brand Values (Behavioural Commitments)",
+        items: [
+          { id: "bf-values-1", text: "Staff and app communications show the truth even when it's inconvenient — no premature success screens, no guessed timelines", aaarrr: ["activation"] },
+          { id: "bf-values-2", text: "Every core feature works fully via USSD — nothing is 'USSD-first' in name only while real functionality sits behind an app-only wall", aaarrr: ["activation", "acquisition"] },
+          { id: "bf-values-3", text: "The app and agents make every transaction visibly count toward a savings or credit outcome, not just show a static balance", aaarrr: ["activation", "retention"] },
+          { id: "bf-values-4", text: "Photography, agent branding, and market activations are specifically Sierra Leonean (Freetown, Bo, Kenema, Makeni as they are) — not generic stock imagery", aaarrr: ["awareness"] },
+        ],
+      },
+      {
+        id: "bf-audience",
+        label: "Audience-to-Brand Models (Locked Per Segment)",
+        items: [
+          { id: "bf-aud-1", text: "Existing SLCB retail customers: migration, not acquisition — move the existing relationship onto a faster channel", aaarrr: ["retention", "activation"] },
+          { id: "bf-aud-2", text: "Unbanked youth: wallet first, bank second — let them transact and see value before asking them to think of themselves as an SLCB customer", aaarrr: ["acquisition"] },
+          { id: "bf-aud-3", text: "University students: peer-proof, not parent-proof — referral and visible peer use outweighs institutional messaging aimed at them directly", aaarrr: ["referral", "acquisition"] },
+          { id: "bf-aud-4", text: "National Service Corps: institutional onboarding at the moment of stipend disbursement, arranged through the Corps administration, not individual persuasion", aaarrr: ["acquisition"] },
+          { id: "bf-aud-5", text: "SMEs/MSMEs: credit is the hook, not the wallet — lead with transaction-history-based lending, the one thing neither competitor wallet can credibly offer", aaarrr: ["acquisition", "revenue"] },
+          { id: "bf-aud-6", text: "Market traders: agent at the market table, not a marketing message — physical, human, in-market presence decides adoption here", aaarrr: ["acquisition", "activation"] },
+          { id: "bf-aud-7", text: "Rural informal earners: design as if the app doesn't exist — USSD-first is the primary design for this segment, not a fallback", aaarrr: ["acquisition", "activation"] },
+          { id: "bf-aud-8", text: "Community leaders: advocacy channel engaged deliberately ahead of mass-media spend — not a transacting audience", aaarrr: ["referral", "awareness"] },
+          { id: "bf-aud-9", text: "Split government-ownership messaging by segment: lead with safety and permanence for existing customers and rural depositors; lead with speed and visible human presence (agents, tellers) for youth, SME, and trader segments, never the same government-bank message for both", aaarrr: ["awareness", "acquisition"] },
+        ],
+      },
+    ],
+  },
+  {
     id: "phase-0",
     label: "Phase 0 — Foundation & Proof",
     intro: "Internal only. No external communications until product stability, staff readiness, and regulatory sign-off are all in place.",
@@ -74,6 +119,8 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p0-cult-2", text: "Review all Krio-language campaign materials before production", aaarrr: ["awareness", "activation"], flags: [{ type: "assumed", note: "Krio validation gate — consistent with every prior source document reviewed for this programme. Approver not named in this deck; earlier sources name the Head of Digital Banking & Financial Inclusion." }] },
           { id: "p0-cult-3", text: "Run community listener focus groups across Freetown and secondary cities", aaarrr: ["awareness"] },
           { id: "p0-cult-4", text: "Lodge final approved copy master document with Marketing", aaarrr: ["awareness"] },
+          { id: "p0-cult-5", text: "Validate Temne-language versions of radio and activation copy for Northern Province (Makeni) — a straight Krio translation will not land as genuinely local", aaarrr: ["awareness"] },
+          { id: "p0-cult-6", text: "Validate Mende-language versions of radio and activation copy for Southern/Eastern Province (Bo, Kenema) — same reasoning as Temne for the North", aaarrr: ["awareness"] },
         ],
       },
       {

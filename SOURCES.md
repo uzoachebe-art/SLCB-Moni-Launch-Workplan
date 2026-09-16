@@ -43,6 +43,43 @@ Measurement Framework, Evaluation Cadence. BTV appears here too, named as Strate
 - AAARRR tags are mandatory on every item in this tab (unlike the Gantt/Matrix tabs, where tags are
   scoped to only two of the six BTV workstreams) — per Uzo's explicit instruction for this addition.
 
+## Third and fourth sources (Project Management tab, added 2026-09-16)
+
+`SLCB_Moni_Brand_Platform_Differentiation_Strategy v2.docx` (brand purpose, positioning statement,
+four brand values, seven-segment/three-tier audience architecture, "Gate 01" approval checklist —
+September 2026) and `SLCB_Phase1_Research_Diagnostic_Report v2.docx` (fintech/banking landscape,
+competitor benchmark incl. Vult and Flot, consumer segmentation, localization & cultural insight —
+four sub-documents, September 2026).
+
+**Governing rule applied to both, stated explicitly by Uzo mid-build:** only line items that need to
+be *executed* to drive Awareness, Acquisition, Activation, Retention, Referral, or Revenue belong in
+this tab — strategy rationale, evidence tables, and competitive analysis do not, however well-argued.
+This meant most of both documents was excluded. What passed the bar:
+
+- **From the Brand Platform doc:** a new "Brand Foundation — Gate 01" phase, added before Phase 0 —
+  (1) one hard-gate item ("close Gate 01 in writing before any visual identity or creative design work
+  begins" — the source's own words: "nothing visual is designed until this gate closes"); (2) four
+  Brand Values reframed as concrete build/production requirements (USSD feature parity, honest
+  in-app status states, visible savings/credit progress, Sierra-Leone-specific creative) rather than
+  the source's abstract value language; (3) nine Audience-to-Brand Models, one per segment plus
+  community leaders, each already phrased in the source as an execution directive (e.g. "wallet
+  first, bank second" for unbanked youth) rather than a description.
+  **Explicitly dropped** despite being in the source's own "Approval Checklist": five items that were
+  strategy-quality reflection questions for leadership ("is the brand purpose different enough...",
+  "does positioning reflect what leadership wants...", "are the values specific enough...") — these
+  don't themselves drive AAARRR execution, so they were cut even though the source presents them as
+  a checklist.
+- **From the Phase 1 Diagnostic Report:** three items only — Temne-language copy validation for
+  Northern Province (Makeni) and Mende-language validation for Southern/Eastern Province (Bo,
+  Kenema), added to Phase 0's existing Cultural & Copy Validation section (which previously only
+  named Krio); and one messaging-execution directive splitting government-ownership messaging by
+  segment (safety/permanence vs. speed/human-presence), added to the Audience-to-Brand Models
+  section. Everything else in this 246-line, four-document research pack — the competitor benchmark
+  matrix (Orange Money, Afrimoney, Vult, Flot, SafulPay, Casham, EziPay SL), the banking-sector
+  landscape figures, the consumer segmentation tables, and the trust/localization findings — is
+  evidence and rationale, not an execution task, and was excluded even where individually well
+  documented and sourced.
+
 ## What was extracted, verbatim or structurally faithful
 
 - **Six execution workstreams** (§ Scope) — full scope overview + all named deliverables for each.
