@@ -42,8 +42,8 @@ export function ProjectManagementView({
   return (
     <div className="space-y-4">
       <div className="text-xs text-gray-500 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
-        What needs to be done, grouped by campaign phase — not a timeline. Source: the 18-month
-        &quot;Watch It Grow&quot; campaign strategy. Checkboxes are for your own reading session only —
+        What needs to be done, grouped by campaign phase, not a timeline. Source: the 18-month
+        &quot;Watch It Grow&quot; campaign strategy. Checkboxes are for your own reading session only;
         they are not saved.
       </div>
 
@@ -77,7 +77,7 @@ export function ProjectManagementView({
                           <span className={checked[item.id] ? "text-gray-400 line-through" : "text-gray-800"}>
                             {item.text}
                           </span>
-                          {item.owner && <span className="text-gray-400 text-xs"> — {item.owner}</span>}
+                          {item.owner && <span className="text-gray-400 text-xs"> ({item.owner})</span>}
                           <div className="flex flex-wrap items-center gap-1 mt-1">
                             {item.aaarrr.map((s) => (
                               <span key={s} className="text-[9px] font-bold bg-navy-50 text-navy px-1 rounded" title={AAARRR_META[s].priority}>

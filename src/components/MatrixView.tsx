@@ -19,7 +19,7 @@ export function MatrixView({
   const [sortAsc, setSortAsc] = useState(true);
   const wsMap = useMemo(() => Object.fromEntries(workstreams.map((w) => [w.id, w])), [workstreams]);
   // Proposal order (Research -> GTM -> MarComms -> Creative -> Asset Production -> Execution Support),
-  // not alphabetical — matches the source's own Execution Framework & Workstream Matrix sequence.
+  // not alphabetical; matches the source's own Execution Framework & Workstream Matrix sequence.
   const wsOrder = useMemo(() => Object.fromEntries(workstreams.map((w, i) => [w.id, i])), [workstreams]);
 
   const sorted = useMemo(() => {
@@ -110,7 +110,7 @@ export function MatrixView({
                         ))}
                       </div>
                     ) : (
-                      <span className="text-gray-300">—</span>
+                      <span className="text-gray-300">N/A</span>
                     )}
                   </td>
                 </tr>

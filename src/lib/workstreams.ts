@@ -17,7 +17,7 @@ export const MILESTONES: Milestone[] = [
     date: "2026-10-12",
     kind: "hard-gate",
     note:
-      "2nd week of October 2026. This is Uzo's own addition on top of the Execution Partner's proposal, which the Execution Partner has not seen or approved — the source document treats October alone as a single 'Official Product Launch,' with no soft/main split. Exact day not stated anywhere; placed on the Monday of the 2nd full week. [UZO TO CONFIRM]",
+      "2nd week of October 2026. This is Uzo's own addition on top of the Execution Partner's proposal, which the Execution Partner has not seen or approved. The source document treats October alone as a single 'Official Product Launch,' with no soft/main split. Exact day not stated anywhere; placed on the Monday of the 2nd full week. [UZO TO CONFIRM]",
   },
   {
     id: "main-launch",

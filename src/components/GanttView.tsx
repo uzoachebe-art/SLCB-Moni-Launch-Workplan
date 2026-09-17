@@ -8,12 +8,12 @@ import { AAARRR_META } from "@/lib/aaarrrMeta";
 import { FlagBadgeRow } from "./FlagBadge";
 import { activityById } from "@/lib/data";
 
-const COL_WIDTH = 130; // px per month (wider — only a 4-month window)
+const COL_WIDTH = 130; // px per month (wider, only a 4-month window)
 const ROW_HEIGHT = 44;
 const LABEL_WIDTH = 220;
 
 const GRID_START = { year: 2026, month: 8 }; // September 2026 (bars start mid-month, from the 15th)
-const GRID_END = { year: 2027, month: 0 }; // January 2027 — the grid is open-ended beyond this, not a hard stop
+const GRID_END = { year: 2027, month: 0 }; // January 2027; the grid is open-ended beyond this, not a hard stop
 
 function packRows(activities: Activity[]): { activity: Activity; row: number }[] {
   const sorted = [...activities].sort((a, b) => a.start.localeCompare(b.start));
@@ -99,7 +99,7 @@ export function GanttView({
               ))}
             </div>
 
-            {/* Open-ended marker — the programme continues beyond this grid, not a hard stop */}
+            {/* Open-ended marker: the programme continues beyond this grid, not a hard stop */}
             <div
               className="absolute top-0 bottom-0 z-20 pointer-events-none border-l-2 border-dashed border-gray-400"
               style={{ left: gridWidth - 1 }}
@@ -208,7 +208,7 @@ function ActivityDetail({ activity, onClose }: { activity: Activity; onClose: ()
             </div>
           ) : (
             <div className="text-xs text-gray-400 mt-1">
-              Not applicable — AAARRR tags apply only within Asset Production &amp; Rollout and Campaign
+              Not applicable: AAARRR tags apply only within Asset Production &amp; Rollout and Campaign
               Execution Support.
             </div>
           )}

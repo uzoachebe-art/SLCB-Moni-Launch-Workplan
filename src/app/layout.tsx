@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SLCB Moni Wallet — Launch Workplan",
+  title: "SLCB Moni Wallet: Launch Workplan",
   description: "Interactive Gantt and workplan from the Execution Partner scope of work for the SLCB Moni Wallet launch campaign.",
 };
 

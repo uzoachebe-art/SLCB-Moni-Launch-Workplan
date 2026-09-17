@@ -32,7 +32,7 @@ export default function Home() {
     <main className="min-h-screen pb-16">
       <header className="bg-navy text-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-5">
-          <h1 className="text-xl sm:text-2xl font-bold">SLCB Moni Wallet — Launch Workplan</h1>
+          <h1 className="text-xl sm:text-2xl font-bold">SLCB Moni Wallet: Launch Workplan</h1>
         </div>
       </header>
 

@@ -1,7 +1,7 @@
 import { Activity } from "../types";
 
 // AAARRR stage tags are applied only within Asset Production & Rollout and Campaign Execution
-// Support — the two workstreams carrying granular, customer-facing execution actions — per Uzo's
+// Support (the two workstreams carrying granular, customer-facing execution actions) per Uzo's
 // instruction (2026-09-15). Research, GTM Strategy, MarComms Development, and Creative Ideation are
 // upstream strategy/planning work and carry no AAARRR tags.
 
@@ -43,7 +43,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: "ws3-planning",
     workstream: "marcomms-development",
-    title: "MarComms Planning — media mix, content calendar, Krio-Temne-Mende-Language validation setup",
+    title: "MarComms Planning: media mix, content calendar, Krio-Temne-Mende-Language validation setup",
     deliverables: [
       "Multi-Channel Media Mix Strategy",
       "Master Content & Deployment Calendar (mapped to brand ambassador Suad Baydoun's pre-approved utilization plan)",
@@ -55,7 +55,7 @@ export const ACTIVITIES: Activity[] = [
     aaarrr: [],
     dependsOn: ["ws1-research"],
     flags: [
-      { type: "assumed", note: "Krio-Temne-Mende-Language Validation Workflow names the Head of Digital Banking & Financial Inclusion (Mary Magdalene Deen) as approver, per the source document — formal sign-off must complete before any Krio-Temne-Mende-language production run. The source document itself only names Krio; Temne and Mende were added per Uzo's instruction (2026-09-16), reflecting the Phase 1 Research Diagnostic Report's finding that Northern and Southern/Eastern Province content needs its own language, not a Krio translation." },
+      { type: "assumed", note: "Krio-Temne-Mende-Language Validation Workflow names the Head of Digital Banking & Financial Inclusion (Mary Magdalene Deen) as approver, per the source document; formal sign-off must complete before any Krio-Temne-Mende-language production run. The source document itself only names Krio; Temne and Mende were added per Uzo's instruction (2026-09-16), reflecting the Phase 1 Research Diagnostic Report's finding that Northern and Southern/Eastern Province content needs its own language, not a Krio translation." },
     ],
     monthLabel: "Month 1 - Sep 2026",
   },
@@ -81,7 +81,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: "ws6-bsl-clearance",
     workstream: "execution-support",
-    title: "Regulatory & Compliance Gate Management — BSL clearance on promotional mechanics",
+    title: "Regulatory & Compliance Gate Management: BSL clearance on promotional mechanics",
     deliverables: ["Regulatory & Compliance Gate Management (ongoing BSL compliance review coordination)"],
     governingStakeholders: "Execution Partner, Integra, SLCB, & BSL Regulators",
     start: "2026-09-15",
@@ -113,7 +113,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: "ws3-launch-execution",
     workstream: "marcomms-development",
-    title: "Official Launch Execution — deploy launch comms, initiate acquisition & USSD funnels",
+    title: "Official Launch Execution: deploy launch comms, initiate acquisition & USSD funnels",
     deliverables: [
       "USSD & Digital Cross-Platform Integration Plan (digital app prompts <-> *944# USSD journey, live)",
     ],
@@ -123,7 +123,7 @@ export const ACTIVITIES: Activity[] = [
     aaarrr: [],
     dependsOn: ["ws3-planning", "ws2-gtm-plan", "ws6-bsl-clearance", "ws5-asset-production"],
     flags: [
-      { type: "conflict", note: "Source document's own Month 2 narrative labels this 'Official Product Launch' under joint 'Scopes 2 & 3' (GTM Strategy + MarComms) — represented here once, in the MarComms lane, with an explicit dependency back to ws2-gtm-plan rather than duplicated across both lanes." },
+      { type: "conflict", note: "Source document's own Month 2 narrative labels this 'Official Product Launch' under joint 'Scopes 2 & 3' (GTM Strategy + MarComms); represented here once, in the MarComms lane, with an explicit dependency back to ws2-gtm-plan rather than duplicated across both lanes." },
       { type: "uzo-to-confirm", note: "This is the source's single October 'Official Product Launch' event. Uzo's brief splits October into a 2nd-week Soft Launch and a separate December Main Launch. Comms/channel-activation deliverables (this activity) are mapped to the SOFT LAUNCH; asset production/merchandising rollout (ws5) continues through toward Main Launch prep. [UZO TO CONFIRM] this split is correct." },
     ],
     monthLabel: "Month 2 - Oct 2026",
@@ -147,7 +147,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: "ws3-amplification",
     workstream: "marcomms-development",
-    title: "Full Amplification — paid digital ads, regional radio jingles & outdoor touchpoints scaled",
+    title: "Full Amplification: paid digital ads, regional radio jingles & outdoor touchpoints scaled",
     governingStakeholders: "Execution Partner Creative & Head of Digital Banking (jointly with Asset Production per source Scopes 3 & 5)",
     start: "2026-11-01",
     end: "2026-11-30",
@@ -158,7 +158,7 @@ export const ACTIVITIES: Activity[] = [
   {
     id: "ws5-amplification-support",
     workstream: "asset-production",
-    title: "Amplification Asset Support — distributed collateral feeding paid/radio amplification",
+    title: "Amplification Asset Support: distributed collateral feeding paid/radio amplification",
     governingStakeholders: "Production Partners & Execution Partner Operations",
     start: "2026-11-01",
     end: "2026-11-30",
@@ -191,7 +191,7 @@ export const ACTIVITIES: Activity[] = [
     aaarrr: [],
     dependsOn: ["ws2-gtm-plan"],
     flags: [
-      { type: "assumed", note: "Tracks the Q4 interim milestone alongside — not instead of — the Year-1 target. Figures intentionally not shown here; no target has been validated." },
+      { type: "assumed", note: "Tracks the Q4 interim milestone alongside (not instead of) the Year-1 target. Figures intentionally not shown here; no target has been validated." },
     ],
     monthLabel: "Month 3 - Nov 2026",
   },
@@ -210,7 +210,7 @@ export const ACTIVITIES: Activity[] = [
     monthLabel: "Month 3 - Nov 2026",
   },
 
-  // ---- Month 4 (Dec 2026) onward: Retention, Optimisation, Strategic Handover — open-ended into Q1 2027 ----
+  // ---- Month 4 (Dec 2026) onward: Retention, Optimisation, Strategic Handover, open-ended into Q1 2027 ----
   {
     id: "ws6-retention-handover",
     workstream: "execution-support",
@@ -226,7 +226,7 @@ export const ACTIVITIES: Activity[] = [
     aaarrr: ["retention", "referral", "revenue"],
     dependsOn: ["ws6-field-activation", "ws6-midflight-review"],
     flags: [
-      { type: "uzo-to-confirm", note: "Source document frames all of December as Month 4 retention/handover under the single October launch. Under Uzo's Soft/Main split, does retention activity begin immediately after Soft Launch (mid-Oct) and this December phase represent a second wave tied to Main Launch, or does retention genuinely wait until Main Launch as shown? Shown here starting at Main Launch per the source's own Month 4 dating — flagged for confirmation." },
+      { type: "uzo-to-confirm", note: "Source document frames all of December as Month 4 retention/handover under the single October launch. Under Uzo's Soft/Main split, does retention activity begin immediately after Soft Launch (mid-Oct) and this December phase represent a second wave tied to Main Launch, or does retention genuinely wait until Main Launch as shown? Shown here starting at Main Launch per the source's own Month 4 dating; flagged for confirmation." },
     ],
     monthLabel: "Month 4 - Dec 2026, ongoing into Q1 2027",
   },

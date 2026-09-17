@@ -43,7 +43,7 @@ export function RiskView({ risks, assumptions }: { risks: Risk[]; assumptions: A
                 <div className="font-semibold text-sm text-gray-800">{a.name}</div>
                 {a.unresolved && (
                   <span className="text-[10px] font-bold uppercase tracking-wide border border-brandred bg-brandred-50 text-brandred-dark rounded px-1.5 py-0.5">
-                    Open — not resolved
+                    Open, not resolved
                   </span>
                 )}
               </div>

@@ -102,7 +102,7 @@ export function Legend() {
       </span>
       <span className="flex items-center gap-1">⛓ Has dependency</span>
       <span className="flex items-center gap-1">
-        <span className="w-2.5 h-2.5 rounded border-2 border-brandred inline-block" /> Flagged item — click badge for detail
+        <span className="w-2.5 h-2.5 rounded border-2 border-brandred inline-block" /> Flagged item: click badge for detail
       </span>
     </div>
   );
