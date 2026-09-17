@@ -158,3 +158,44 @@ This meant most of both documents was excluded. What passed the bar:
    This is a deliberate narrowing of the earlier "AAARRR mandatory on every workstream" instruction
    from the original brief — the newer, more specific instruction governs. Filter logic updated so an
    untagged activity is never hidden by the AAARRR filter (empty array always passes).
+
+## Fifth source (Project Management tab, added 2026-09-17)
+
+`SLCB_BrandAmbassador_SuadBaydoun_ExecDoc.docx (1).pdf` — the Suad Baydoun Brand Ambassador
+Utilisation Plan, an Executive Approval Document, May 2026. Unlike the two prior source documents
+added to this tab, this one is genuinely execution-dense — real ATL/digital/TTL activation plans, not
+strategy rationale — so most of its content passed the "must drive AAARRR execution" filter. Added:
+a new Phase 0 "Ambassador Engagement" section (contract sign-off as a hard gate, brand onboarding,
+content approval workflow) and a new Phase 1 "Suad Baydoun — Ambassador Activations" section (TVC,
+billboard, newspaper, recurring radio co-host slot, a monthly content-cadence rule anchoring each
+piece to a specific product feature, and the three named TTL activations: 'Suad on Campus,' 'Suad Di
+Market,' and National Event Presence). Excluded per the standing rule: Section 6's financial contract
+terms (duration, fees, exclusivity — administrative, not AAARRR-driving), Section 7's KPI/ROI targets
+(same figures-exclusion convention as the rest of this tab), and Section 8's risk register (risk
+content belongs in the separate Risks & Assumptions tab, not here). Section 9's approval/legal/budget
+steps were also excluded as administrative, except the contract-signing step itself, which is kept as
+a single hard gate since every ambassador-fronted Phase 1 execution depends on it.
+
+## Structural review (2026-09-17) — added on request, not from any single source document
+
+Acting as a senior project director / brand strategist reviewing whether following this tab would
+actually deliver a successful campaign, four gaps were identified and closed:
+
+1. **No measurement infrastructure setup.** The tab had extensive execution detail but nothing about
+   building the tracking that would let any of it be measured — added a "Measurement Infrastructure"
+   section to Phase 0 (UTM/promo-code tagging, KPI dashboard build, NPS/belief-shift baseline survey).
+2. **No consolidated go/no-go gate.** Each Phase 0 exit condition existed as a separate item, but
+   nothing made one person accountable for confirming all of them together before Phase 1's
+   simultaneous, all-channel launch — added a "Launch Readiness Gate" section as the last item in
+   Phase 0.
+3. **No ongoing review/correction cadence.** Without a recurring feedback loop, nothing in the tab
+   can be corrected mid-flight — added a "Performance Review Cadence" section to Phase 1 (weekly,
+   monthly, quarterly), deliberately without the specific figures/targets that would otherwise belong
+   here, consistent with this tab's standing no-figures rule.
+4. **No incident/escalation protocol.** The source materials name real risk precedents (a prior Play
+   Store removal, historical failed-transaction volume) but no execution task anywhere builds the
+   response protocol itself — added to Phase 0's Regulatory & Legal section.
+
+None of these four items trace to a specific source document — they're flagged `ASSUMED` or
+`CONFLICT` in the data and marked "Added on review" in their own note text, so they remain
+distinguishable from source-derived content.

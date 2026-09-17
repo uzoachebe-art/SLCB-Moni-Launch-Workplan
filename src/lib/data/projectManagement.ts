@@ -144,6 +144,12 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p0-reg-2", text: "Legal review: confirm draw mechanics are not classified as a lottery under Sierra Leone law", aaarrr: ["activation"] },
           { id: "p0-reg-3", text: "Confirm KYC tiering for Moni accounts with BSL compliance team", aaarrr: ["activation"] },
           { id: "p0-reg-4", text: "Finalise Moni Savings Circle terms & conditions (English + Krio-Temne-Mende, approved)", aaarrr: ["activation"] },
+          {
+            id: "p0-reg-5",
+            text: "Establish and test an incident escalation protocol for failed transactions, app instability, or ambassador conduct issues, with a defined path to the MD",
+            aaarrr: ["activation", "retention"],
+            flags: [{ type: "assumed", note: "Added on review: the campaign's own risk sources (a prior Play Store removal, historical failed-transaction volume) are real precedents but no execution task builds the response protocol itself anywhere in the source materials reviewed for this tool." }],
+          },
         ],
       },
       {
@@ -154,6 +160,48 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p0-creative-2", text: "Record radio spots in English and Krio-Temne-Mende, pending final copy validation", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-3", text: "Complete social media content calendar, incl. ambassador content", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-4", text: "Print and install in-branch POS materials (Moni enrolment QR, Savings Circle display)", aaarrr: ["awareness", "acquisition"] },
+        ],
+      },
+      {
+        id: "p0-ambassador",
+        label: "Ambassador Engagement (Suad Baydoun)",
+        items: [
+          {
+            id: "p0-amb-1",
+            text: "Sign the brand ambassador contract (terms, morality clause, exclusivity scope) before any ATL, digital, or TTL ambassador activity begins",
+            aaarrr: ["activation"],
+            owner: "SLCB Legal + CFO",
+            flags: [{ type: "conflict", note: "Hard gate — every Phase 1 ambassador-fronted execution (TVC, OOH, digital content, campus and market activations) depends on this closing first." }],
+          },
+          { id: "p0-amb-2", text: "Run ambassador brand onboarding: guidelines, tone of voice, product demonstrations, content calendar briefing", aaarrr: ["awareness"], owner: "Head of Marketing" },
+          { id: "p0-amb-3", text: "Stand up the content approval workflow: every ambassador digital post reviewed and approved by Head of Marketing and Head of Digital Technology before publication", aaarrr: ["activation"] },
+        ],
+      },
+      {
+        id: "p0-measurement",
+        label: "Measurement Infrastructure",
+        items: [
+          {
+            id: "p0-meas-1",
+            text: "Implement UTM tagging and unique promo/campaign codes across every digital, SMS, and USSD touchpoint before any channel goes live",
+            aaarrr: ["acquisition"],
+            flags: [{ type: "assumed", note: "Added on review: without this in place before Phase 1, acquisition and referral cannot be attributed by channel or segment, which undermines every other execution decision downstream." }],
+          },
+          { id: "p0-meas-2", text: "Build the KPI dashboard and confirm live data feeds from the telco partner, e-channels team, and social platforms before Phase 1 launch", aaarrr: ["retention"] },
+          { id: "p0-meas-3", text: "Commission the NPS and belief-shift baseline survey — must complete before any awareness or belief-shift target is set or any campaign activity runs", aaarrr: ["retention"] },
+        ],
+      },
+      {
+        id: "p0-gate",
+        label: "Launch Readiness Gate",
+        items: [
+          {
+            id: "p0-gate-1",
+            text: "Confirm every Phase 0 exit condition is met — product stability, staff certification, agent network live, regulatory sign-off, Krio-Temne-Mende validation, ambassador contract signed, and measurement infrastructure live — before Phase 1 begins",
+            aaarrr: ["activation"],
+            owner: "SLCB MD / Exco",
+            flags: [{ type: "conflict", note: "Added on review as a single consolidating go/no-go checkpoint — the source materials state each Phase 0 condition individually but never a single point where someone is accountable for confirming all of them together before Phase 1's simultaneous, all-channel launch." }],
+          },
         ],
       },
     ],
@@ -232,6 +280,44 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p1-pr-2", text: "MD interview: editorial framing, not advertising", aaarrr: ["awareness"] },
           { id: "p1-pr-3", text: "Press coverage of first draw winners — human-interest angle, photography", aaarrr: ["awareness", "referral"] },
           { id: "p1-pr-4", text: "Cite BSL presence at the draw in all press releases as a regulatory-credibility signal", aaarrr: ["awareness"] },
+        ],
+      },
+      {
+        id: "p1-ambassador",
+        label: "Suad Baydoun — Ambassador Activations",
+        items: [
+          { id: "p1-amb-1", text: "Produce and air a 30-second ambassador TVC plus a 2-minute brand documentary segment", aaarrr: ["awareness"], owner: "Execution Partner" },
+          { id: "p1-amb-2", text: "Produce ambassador billboard creative for priority Freetown and provincial sites, with QR and WhatsApp-chatbot call to action", aaarrr: ["awareness"], owner: "Execution Partner" },
+          { id: "p1-amb-3", text: "Produce an ambassador half-page newspaper advertisement for national press", aaarrr: ["awareness"], owner: "Execution Partner" },
+          { id: "p1-amb-4", text: "Book a recurring live ambassador co-host slot on a morning radio show", aaarrr: ["awareness", "retention"] },
+          { id: "p1-amb-5", text: "Maintain a minimum of six ambassador-fronted content pieces per month across TikTok, Instagram, and Facebook, each anchored to a specific SLCB Moni feature or channel (USSD, wallet, agent locator, WhatsApp bot) rather than a general brand post", aaarrr: ["awareness", "acquisition"] },
+          {
+            id: "p1-amb-6",
+            text: "'Suad on Campus': ambassador-hosted campus activation with a live USSD account-opening station and QR scan-to-register at the venue entrance",
+            aaarrr: ["acquisition", "activation"],
+            flags: [{ type: "assumed", note: "More specific than, and complementary to, the general campus agent activation already listed under Grow From Day One (Phase 3) — this is the ambassador-fronted version of the same activation type." }],
+          },
+          {
+            id: "p1-amb-7",
+            text: "'Suad Di Market': ambassador-led market storm staffed by a dedicated squad (one account opener, one QR printer, one merchant enroller, one content-capture role), issuing merchant QR codes on-site",
+            aaarrr: ["acquisition", "activation"],
+            flags: [{ type: "assumed", note: "Adds a specific squad staffing structure to the general agent market-storm activation already listed under Phase 1 Agent Network." }],
+          },
+          { id: "p1-amb-8", text: "Position the ambassador as SLCB's public face at major national events, with a branded activation zone for live account opening and USSD demonstrations", aaarrr: ["awareness", "acquisition"] },
+        ],
+      },
+      {
+        id: "p1-review",
+        label: "Performance Review Cadence (Ongoing From Launch)",
+        items: [
+          {
+            id: "p1-review-1",
+            text: "Weekly review: social engagement, WhatsApp bot volume, agent enrolments by location, failed-transaction rate — owned jointly by SLCB Marketing and the social media agency",
+            aaarrr: ["retention"],
+            flags: [{ type: "assumed", note: "Added on review to give the campaign a standing feedback loop — without a recurring review, none of the other execution items in this tab can be corrected mid-flight. Figures/targets intentionally not shown here." }],
+          },
+          { id: "p1-review-2", text: "Monthly review: active users, new accounts by segment and channel, Savings Circle registrations, SMS performance — owned jointly by SLCB Marketing, Integra, and the Execution Partner", aaarrr: ["retention", "revenue"] },
+          { id: "p1-review-3", text: "Quarterly review: full KPI dashboard, NPS and belief-shift movement, channel ROI, phase-gate decision (proceed or recalibrate) — owned by SLCB MD and Exco, decision recorded in writing", aaarrr: ["retention", "revenue"] },
         ],
       },
     ],
