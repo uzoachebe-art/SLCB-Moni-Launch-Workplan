@@ -199,3 +199,30 @@ actually deliver a successful campaign, four gaps were identified and closed:
 None of these four items trace to a specific source document — they're flagged `ASSUMED` or
 `CONFLICT` in the data and marked "Added on review" in their own note text, so they remain
 distinguishable from source-derived content.
+
+## RACI model added (2026-09-17)
+
+Every Project Management line item now carries a RACI assignment (Responsible, Accountable,
+Consulted, Informed). Per Uzo's instruction, names are not invented — Accountable defaults to the
+existing `owner` field where one was already set; all other roles render as "TBC" until Uzo supplies
+names. The `raci` field on `PmItem` (see `src/lib/data/projectManagement.ts`) is ready to take real
+names per item without any further structural change.
+
+## Corrections applied (2026-09-17, in chat)
+
+- Cultural & Copy Validation: copy master document now lodged with Corporate Services / Digital
+  Banking & Financial Inclusion, not "Marketing."
+- Agent Network Readiness: teller training scope widened to cover SLCB Moni, Osusu, and Moni Savings
+  Circle registration together, not Savings Circle alone.
+- Regulatory & Legal: the incident escalation protocol now names a specific receiving team per
+  incident type (Reconciliation team for failed transactions, E-Channels for app instability,
+  Director Corporate Services for ambassador conduct) with the defined path corrected from the MD to
+  the CIO.
+- Creative Production: the Execution Partner briefing corrected from "campaign creative" to
+  "campaign strategy, to build creative concepts from the strategy" — a sequencing correction (brief
+  the strategy first, creative concepts follow from it).
+- Ambassador Engagement: the contract sign-off hard-gate item removed entirely, per instruction.
+- Measurement Infrastructure: the KPI dashboard build item removed entirely, per instruction (the UTM
+  tagging and NPS/belief-shift baseline items remain).
+- Radio (Phase 1): the launch spot corrected to "'Watch It Grow' Creative Concept spot," consistent
+  with the Creative Production sequencing correction above.

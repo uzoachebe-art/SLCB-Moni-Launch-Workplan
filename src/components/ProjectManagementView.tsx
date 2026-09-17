@@ -1,10 +1,37 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { PmPhase } from "@/lib/data/projectManagement";
+import { PmItem, PmPhase } from "@/lib/data/projectManagement";
 import { AaarrrStage } from "@/lib/types";
 import { AAARRR_META } from "@/lib/aaarrrMeta";
 import { FlagBadgeRow } from "./FlagBadge";
+
+const RACI_ROLES: { key: keyof NonNullable<PmItem["raci"]>; label: string; hint: string }[] = [
+  { key: "responsible", label: "R", hint: "Responsible — does the work" },
+  { key: "accountable", label: "A", hint: "Accountable — owns the outcome" },
+  { key: "consulted", label: "C", hint: "Consulted — gives input before it happens" },
+  { key: "informed", label: "I", hint: "Informed — told after it happens" },
+];
+
+function RaciRow({ item }: { item: PmItem }) {
+  return (
+    <div className="flex flex-wrap items-center gap-1.5 mt-1">
+      {RACI_ROLES.map(({ key, label, hint }) => {
+        const name =
+          item.raci?.[key] ?? (key === "accountable" ? item.owner : undefined);
+        return (
+          <span
+            key={key}
+            title={hint}
+            className={`text-[10px] rounded px-1 py-0.5 border ${name ? "border-gray-300 bg-gray-50 text-gray-600" : "border-dashed border-gray-200 text-gray-300"}`}
+          >
+            <span className="font-bold">{label}:</span> {name ?? "TBC"}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
 
 export function ProjectManagementView({
   phases,
@@ -44,7 +71,8 @@ export function ProjectManagementView({
       <div className="text-xs text-gray-500 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
         What needs to be done, grouped by campaign phase, not a timeline. Source: the 18-month
         &quot;Watch It Grow&quot; campaign strategy. Checkboxes are for your own reading session only;
-        they are not saved.
+        they are not saved. Each item carries a RACI (Responsible, Accountable, Consulted, Informed)
+        assignment; names marked TBC are still to be filled in.
       </div>
 
       {filteredPhases.map((phase) => (
@@ -77,7 +105,6 @@ export function ProjectManagementView({
                           <span className={checked[item.id] ? "text-gray-400 line-through" : "text-gray-800"}>
                             {item.text}
                           </span>
-                          {item.owner && <span className="text-gray-400 text-xs"> ({item.owner})</span>}
                           <div className="flex flex-wrap items-center gap-1 mt-1">
                             {item.aaarrr.map((s) => (
                               <span key={s} className="text-[9px] font-bold bg-navy-50 text-navy px-1 rounded" title={AAARRR_META[s].priority}>
@@ -85,6 +112,7 @@ export function ProjectManagementView({
                               </span>
                             ))}
                           </div>
+                          <RaciRow item={item} />
                           <FlagBadgeRow flags={item.flags} />
                         </div>
                       </li>

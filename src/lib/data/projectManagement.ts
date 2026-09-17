@@ -7,11 +7,19 @@ import { AaarrrStage, Flag } from "../types";
 // per instruction. See SOURCES.md for full provenance and the two internal date conflicts in the
 // source deck (merchant-QR gate: Month 12 vs Month 18; agent-network gate: Month 9 vs Month 12).
 
+export interface Raci {
+  responsible?: string;
+  accountable?: string;
+  consulted?: string;
+  informed?: string;
+}
+
 export interface PmItem {
   id: string;
   text: string;
   aaarrr: AaarrrStage[];
   owner?: string;
+  raci?: Raci;
   flags?: Flag[];
 }
 
@@ -120,14 +128,14 @@ export const PM_PHASES: PmPhase[] = [
             flags: [{ type: "assumed", note: "Krio-Temne-Mende-language validation gate: the Krio portion is consistent with every prior source document reviewed for this programme; Temne and Mende were added per Uzo's instruction (2026-09-16), reflecting the Phase 1 Research Diagnostic Report's regional-language findings. Approver not named in the 18-month campaign deck; earlier sources name the Head of Digital Banking & Financial Inclusion." }],
           },
           { id: "p0-cult-3", text: "Run community listener focus groups across Freetown and secondary cities", aaarrr: ["awareness"] },
-          { id: "p0-cult-4", text: "Lodge final approved copy master document with Marketing", aaarrr: ["awareness"] },
+          { id: "p0-cult-4", text: "Lodge final approved copy master document with Corporate Services / Digital Banking & Financial Inclusion", aaarrr: ["awareness"] },
         ],
       },
       {
         id: "p0-agent",
         label: "Agent Network Readiness",
         items: [
-          { id: "p0-agent-1", text: "Mi Yone Teller agent trainings, certified in Moni Savings Circle registration", aaarrr: ["acquisition", "activation"] },
+          { id: "p0-agent-1", text: "Mi Yone Teller agent trainings and certified in SLCB Moni, Osusu, Moni Savings Circle registration", aaarrr: ["acquisition", "activation"] },
           { id: "p0-agent-2", text: "Map agent locations against Freetown market footprint and secondary-city priority", aaarrr: ["acquisition"] },
           { id: "p0-agent-3", text: "Distribute agent branding kit (SLCB Moni QR display, branded t-shirt, signage)", aaarrr: ["awareness", "acquisition"] },
           { id: "p0-agent-4", text: "Set a minimum monthly enrolment threshold for an agent to remain active", aaarrr: ["acquisition", "activation"] },
@@ -143,7 +151,7 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p0-reg-4", text: "Finalise Moni Savings Circle terms & conditions (English + Krio-Temne-Mende, approved)", aaarrr: ["activation"] },
           {
             id: "p0-reg-5",
-            text: "Establish and test an incident escalation protocol for failed transactions, app instability, or ambassador conduct issues, with a defined path to the MD",
+            text: "Establish and test an incident escalation protocol for failed transactions (to Reconciliation team), app instability (to E-Channels), or ambassador conduct issues (to Director Corporate Services), with a defined path to the CIO",
             aaarrr: ["activation", "retention"],
             flags: [{ type: "assumed", note: "Added on review: the campaign's own risk sources (a prior Play Store removal, historical failed-transaction volume) are real precedents but no execution task builds the response protocol itself anywhere in the source materials reviewed for this tool." }],
           },
@@ -153,7 +161,7 @@ export const PM_PHASES: PmPhase[] = [
         id: "p0-creative",
         label: "Creative Production",
         items: [
-          { id: "p0-creative-1", text: "Brief Execution Partner on 'Watch It Grow' campaign creative", aaarrr: ["awareness"], owner: "Execution Partner" },
+          { id: "p0-creative-1", text: "Brief Execution Partner on 'Watch It Grow' campaign strategy to build creative concepts from the strategy", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-2", text: "Record radio spots in English and Krio-Temne-Mende, pending final copy validation", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-3", text: "Complete social media content calendar, incl. ambassador content", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-4", text: "Print and install in-branch POS materials (Moni enrolment QR, Savings Circle display)", aaarrr: ["awareness", "acquisition"] },
@@ -163,13 +171,6 @@ export const PM_PHASES: PmPhase[] = [
         id: "p0-ambassador",
         label: "Ambassador Engagement (Suad Baydoun)",
         items: [
-          {
-            id: "p0-amb-1",
-            text: "Sign the brand ambassador contract (terms, morality clause, exclusivity scope) before any ATL, digital, or TTL ambassador activity begins",
-            aaarrr: ["activation"],
-            owner: "SLCB Legal + CFO",
-            flags: [{ type: "conflict", note: "Hard gate: every Phase 1 ambassador-fronted execution (TVC, OOH, digital content, campus and market activations) depends on this closing first." }],
-          },
           { id: "p0-amb-2", text: "Run ambassador brand onboarding: guidelines, tone of voice, product demonstrations, content calendar briefing", aaarrr: ["awareness"], owner: "Head of Marketing" },
           { id: "p0-amb-3", text: "Stand up the content approval workflow: every ambassador digital post reviewed and approved by Head of Marketing and Head of Digital Technology before publication", aaarrr: ["activation"] },
         ],
@@ -184,7 +185,6 @@ export const PM_PHASES: PmPhase[] = [
             aaarrr: ["acquisition"],
             flags: [{ type: "assumed", note: "Added on review: without this in place before Phase 1, acquisition and referral cannot be attributed by channel or segment, which undermines every other execution decision downstream." }],
           },
-          { id: "p0-meas-2", text: "Build the KPI dashboard and confirm live data feeds from the telco partner, e-channels team, and social platforms before Phase 1 launch", aaarrr: ["retention"] },
           { id: "p0-meas-3", text: "Commission the NPS and belief-shift baseline survey; must complete before any awareness or belief-shift target is set or any campaign activity runs", aaarrr: ["retention"] },
         ],
       },
@@ -223,7 +223,7 @@ export const PM_PHASES: PmPhase[] = [
         id: "p1-radio",
         label: "Radio",
         items: [
-          { id: "p1-radio-1", text: "'Watch It Grow' spot: English and Krio-Temne-Mende versions", aaarrr: ["awareness"], flags: [{ type: "assumed", note: "Marked [ASSUMED, unvalidated] in the source deck, which specifies English and Krio only; Temne and Mende added per Uzo's instruction (2026-09-16)." }] },
+          { id: "p1-radio-1", text: "'Watch It Grow' Creative Concept spot: English and Krio-Temne-Mende versions", aaarrr: ["awareness"], flags: [{ type: "assumed", note: "Marked [ASSUMED, unvalidated] in the source deck, which specifies English and Krio only; Temne and Mende added per Uzo's instruction (2026-09-16)." }] },
           { id: "p1-radio-2", text: "Weekly Moni Savings Circle draw countdown spots", aaarrr: ["awareness", "retention"] },
           { id: "p1-radio-3", text: "Live first-draw broadcast: hosted special, prizes announced on air", aaarrr: ["awareness", "retention"] },
           { id: "p1-radio-4", text: "SLCB MD endorsement in opening-week radio editorial", aaarrr: ["awareness"] },
