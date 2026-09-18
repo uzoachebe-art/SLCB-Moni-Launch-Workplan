@@ -40,6 +40,7 @@ export const SEQUENCING_STAGES: SequencingStage[] = [
       "p0-internal-comms",
       "p0-cultural",
       "p0-creative",
+      "p0-ooh-tv",
       "p0-ambassador",
       "p0-measurement",
       "dp-plan",
@@ -70,7 +71,7 @@ export const SEQUENCING_STAGES: SequencingStage[] = [
     rationale:
       "The public, customer-facing launch. Radio, SMS, social, branch, agent, PR, and ambassador activity all go live simultaneously, per the source strategy's own 'zero silence, zero gaps' framing. Nothing here can start before Wave 4 closes.",
     blockedBy: ["wave-4"],
-    sectionIds: ["p1-launchday", "p1-radio", "p1-sms", "p1-social", "p1-branch", "p1-agent", "p1-pr", "p1-ambassador", "p1-qr-stickers", "p1-traditional-media", "dp-deployment"],
+    sectionIds: ["p1-launchday", "p1-radio", "p1-sms", "p1-social", "p1-branch", "p1-agent", "p1-pr", "p1-ambassador", "p1-qr-stickers", "p1-traditional-media", "p1-ooh-tv-launch", "dp-deployment"],
   },
   {
     id: "wave-6",

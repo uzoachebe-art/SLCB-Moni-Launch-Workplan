@@ -132,4 +132,51 @@ export const ASSUMPTIONS: Assumption[] = [
     implication: "Prevents legal and reputational risks; ensures trust with users.",
     unresolved: true,
   },
+  {
+    id: "assum-8",
+    name: "BTV Contracting and Execution-Window Dates",
+    description:
+      "The OOH/TV strategy's Phase 1 media-buying start assumes BTV is formally contracted with a Sep-Dec 2026 execution window, referenced elsewhere in this programme but not yet confirmed by a signed SOW.",
+    implication: "Confirm signed SOW dates with BTV before any Phase 1 OOH/TV media buying begins.",
+    unresolved: true,
+  },
+  {
+    id: "assum-9",
+    name: "OOH Vendor Identities and Site Inventory",
+    description:
+      "Sierra Leone has no public register of OOH vendors, billboard sites, or rate cards. Every OOH recommendation in the source strategy is a location typology, not a named, priced site.",
+    implication: "Commission a local OOH site audit via the execution partner to convert location typologies into a named, priced site list before booking.",
+    unresolved: true,
+  },
+  {
+    id: "assum-10",
+    name: "National FM Radio Station Register",
+    description:
+      "Only the Bo District FM register has been verified against NATCA's 2025 listing; the Western Area, Bombali, Kono, Kenema, and other districts have not yet been pulled.",
+    implication: "Pull the complete NATCA FM radio register by district before finalizing the national radio buy.",
+    unresolved: true,
+  },
+  {
+    id: "assum-11",
+    name: "TV/Radio Audience Measurement",
+    description: "NATCA does not publish ratings or reach data for Sierra Leone's TV and radio stations.",
+    implication: "Request audience data directly from stations or commission independent measurement research before finalizing tier-by-tier budget allocation.",
+    unresolved: true,
+  },
+  {
+    id: "assum-12",
+    name: "Provincial Town Commercial Weight",
+    description:
+      "The relative traffic and commercial weight of Bo, Kenema, Makeni, Koidu, and Kailahun (versus one another) is assumed, not ground-truthed.",
+    implication: "Ground-truth via the execution partner ahead of the Phase 3 hinterland-expansion budget split.",
+    unresolved: true,
+  },
+  {
+    id: "assum-13",
+    name: "Months 13-18 Contracting Authority",
+    description:
+      "The OOH/TV strategy's Phase 4 (Sustain & Optimize) runs six months beyond the programme's stated 12-month engagement horizon.",
+    implication: "Confirm scope and budget authority for Months 13-18 before Phase 4 of the OOH/TV workplan is finalized.",
+    unresolved: true,
+  },
 ];

@@ -310,3 +310,71 @@ concurrent activities). No monetary or KPI figures appear anywhere in this phase
 every other tab. The plan's own hard gate (paid spend does not begin until the three product-fix
 gates and BSL clearance are confirmed) cross-references the existing Regulatory & Legal section
 rather than duplicating it.
+
+## Eighth and ninth sources (Project Management, Sequencing, Risks & Assumptions tabs, added 2026-09-18)
+
+`SLCB_Moni_Creative_Deliverables_Scope.docx` (comprehensive ATL/BTL/TTL/Digital creative deliverables
+scope for the Execution Partner, iNTEGRA Sys Limited, September 2026) and
+`SLCB_Moni_OOH_TV_Strategy_18Month_Workplan.docx` (OOH & TV Visibility Strategy and 18-Month Workplan,
+same author, same month). Per Uzo's instruction, both were folded into the *existing* Creative
+Production section and existing Phase 0-4 structure rather than creating a redundant new top-level
+phase — the OOH/TV document's own five phases (Pre-Launch Readiness / Launch & Ignition / Urban
+Consolidation / Hinterland Expansion / Sustain & Optimize) map conceptually onto this app's existing
+Foundation & Proof / Ignition / Amplification / Deepening / Dominance phases, so its content was
+distributed across those instead of duplicating the phase structure.
+
+- **Creative Production section (Phase 0) extended** from 4 to 13 items. The ~50 individual
+  deliverables listed in the Creative Scope document (TVC hero film and cutdowns, radio jingle and
+  scripts, print ads, billboards, fliers, brochures, agent kits, USSD scripts, branch signage, ATM
+  wraps, digital display/carousel/video ads, and more) were consolidated into bundled items by
+  channel line (ATL suite, BTL suite, TTL suite, Digital suite, remaining Foundational items) rather
+  than listed one-by-one, consistent with this tab's practice of describing the mechanic rather than
+  enumerating every asset. Two items were kept as their own line rather than bundled because the
+  source itself calls them out as hard sequencing gates: the Master Brand Toolkit & Style Guide
+  ("commission first, every other deliverable depends on it") and the Localization/Translation Matrix
+  (gates all Krio/Temne/Mende content). One item — Branch Exterior Signage — is flagged `BLOCKED`
+  rather than added as a live task, since the source itself states it cannot proceed until the
+  replacement brand platform name is confirmed (the "Nar Wi Bank" platform is retired).
+- **Conflict surfaced, not resolved:** the Creative Scope document treats the brand palette as
+  ambiguous (confirmed navy/red alongside inconsistent secondary references to an oxblood and gold),
+  while the OOH/TV Strategy document treats navy (#1B2A6B) and red (#E2233B) as fully confirmed with
+  no gold or oxblood accent. Flagged as a `conflict` on the relevant Creative Production item rather
+  than silently picking one document's version.
+- **New Phase 0 section "TV & OOH Media Strategy"** (5 items): TV tier confirmation (the source's
+  three-tier station framework — national reach, Freetown urban, faith & community — each with a
+  distinct content role), an OOH placement-typology framework (transit corridors, urban core,
+  provincial hubs, since Sierra Leone has no public OOH vendor/site register), BTV contracting
+  confirmation (flagged `data-required`, since Phase 1 media buying depends on a signed SOW), a full
+  national FM radio register pull (flagged `data-required`, only Bo District is currently verified),
+  and audience-measurement commissioning (flagged `data-required`, since NATCA does not publish
+  ratings data).
+- **New Phase 1 section "OOH & TV: Launch Rotation"** (5 items): Tier 1 brand-film heavy rotation,
+  Tier 2 launch cutdowns, the national radio drumbeat, the Freetown urban + Lungi transit-corridor OOH
+  rollout, and the airport/ferry pre-positioning called out as the source's own "Vision" touchpoint
+  (a traveller from Lungi to a provincial market encountering the brand at the ferry queue, the road
+  corridor, the market, and the agent counter).
+- **Outside-Freetown Launch (Phase 2) extended** with 3 items drawn from the OOH/TV document's Phase
+  3 (Hinterland Expansion): provincial motor-park and market OOH in Bo/Kenema/Makeni/Koidu, regional
+  TV placement where local signal allows, and border-town OOH aligned to the programme's cross-border
+  banking interest (flagged `assumed`, since relative provincial commercial weight is not yet
+  ground-truthed).
+- **Category Claim Campaign (Phase 4) extended** with 2 items from the OOH/TV document's Phase 4
+  (Sustain & Optimize): an NPS-informed creative refresh and a rotation of underperforming OOH sites
+  toward locations NPS/usage data supports.
+- **Sequencing tab updated** to preserve 1:1 coverage: `p0-ooh-tv` added to Wave 2 (Build, Train &
+  Validate), `p1-ooh-tv-launch` added to Wave 5 (Ignition Launch). Verified by cross-check script:
+  all 46 Project Management sections are referenced in exactly one Sequencing wave, no duplicates, no
+  gaps.
+- **Risks & Assumptions tab extended** with 6 new assumptions (`assum-8` through `assum-13`), taken
+  directly from the OOH/TV document's own "Assumptions & Data-Gaps Log": BTV contracting/execution-
+  window dates, OOH vendor/site inventory, the national FM radio register, TV/radio audience
+  measurement, provincial town commercial weight, and Months 13-18 contracting authority (which falls
+  outside the programme's stated 12-month engagement horizon). All marked `unresolved: true`.
+- **Excluded per the standing no-figures rule:** the OOH/TV document's own Month-12 KPI targets
+  (30,000 wallet users, 5,000 USSD users, 700 agents, 25,000 merchants) and its "OOH budget in NLE"
+  data-gap line, since no budget has been validated.
+- **Gantt/Matrix tab deliberately not touched.** That tab is a verbatim, single-source restatement of
+  the Execution Partner's own Scope of Work; these two documents originate from the Digital Strategy
+  Consultant, not the Execution Partner, so adding their content there would break that tab's standing
+  fidelity rule. Everything extracted from both documents therefore lives only in the Project
+  Management, Sequencing, and Risks & Assumptions tabs.

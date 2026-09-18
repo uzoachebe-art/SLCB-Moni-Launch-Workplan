@@ -243,6 +243,62 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p0-creative-2", text: "Record radio spots in English and Krio-Temne-Mende, pending final copy validation", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-3", text: "Complete social media content calendar, incl. ambassador content", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p0-creative-4", text: "Print and install in-branch POS materials (Moni enrolment QR, Savings Circle display)", aaarrr: ["awareness", "acquisition"] },
+          {
+            id: "p0-creative-5",
+            text: "Commission the Master Brand Toolkit and Style Guide first: logo usage, colour, typography, photography style, motion identity, tone of voice, and a Krio glossary",
+            aaarrr: ["awareness"],
+            owner: "Execution Partner",
+            flags: [{ type: "conflict", note: "Foundational hard gate, named explicitly in the source scope's own sequencing note: every other creative deliverable in this section depends on this being commissioned first." }],
+          },
+          {
+            id: "p0-creative-6",
+            text: "Commission the Localization/Translation Matrix (master EN/Krio/Temne/Mende copy deck, version-controlled) alongside the Brand Toolkit",
+            aaarrr: ["awareness"],
+            flags: [{ type: "assumed", note: "Tied to the same cultural-consultant sign-off gate already in this tab's Cultural & Copy Validation section; no translated content goes to production ahead of that validation." }],
+          },
+          { id: "p0-creative-7", text: "Produce the ATL creative suite: TVC hero film with cutdowns and caption files, radio jingle and scripts, press ads and press/media kit, and billboard designs (static, digital/LED, and transit/lamp-post variants)", aaarrr: ["awareness"], owner: "Execution Partner" },
+          { id: "p0-creative-8", text: "Produce the BTL creative suite: fliers and brochures, agent kits and commission banners, and activation merchandise (t-shirts, banners, gazebos, decals), cross-referenced against the existing Activation & Merchandise Plan", aaarrr: ["awareness", "acquisition"], owner: "Execution Partner" },
+          { id: "p0-creative-9", text: "Produce the TTL creative suite: USSD scripts, branch interior design, ATM wrap, digital branch signage, internal branding, and uniform design", aaarrr: ["awareness", "activation"], owner: "Execution Partner" },
+          {
+            id: "p0-creative-10",
+            text: "Hold branch exterior signage, and any deliverable carrying the retired brand platform name, until the replacement brand platform name is confirmed",
+            aaarrr: ["awareness"],
+            flags: [{ type: "data-required", note: "Marked BLOCKED in the source scope pending confirmation of the replacement brand platform name; the previous platform name is retired." }],
+          },
+          { id: "p0-creative-11", text: "Produce the digital creative suite: evergreen content library, how-to and explainer videos, SMS/email/push copy, display/carousel/video ad sets, social templates, and launch landing-page copy", aaarrr: ["awareness", "acquisition"], owner: "Execution Partner" },
+          { id: "p0-creative-12", text: "Produce the remaining foundational deliverables: sonic branding, a motion identity sting, an iconography/pictogram set for USSD and low-literacy signage, accessibility specifications, the regulatory/compliance disclosure pack, crisis and issue-response holding statements, and a reusable customer/merchant testimonial format", aaarrr: ["awareness", "activation"], owner: "Execution Partner" },
+          {
+            id: "p0-creative-13",
+            text: "Confirm the canonical brand colour palette before final art is produced for any ATL or BTL item",
+            aaarrr: ["awareness"],
+            flags: [{ type: "conflict", note: "Two source documents disagree on how settled this is: one treats navy #1B2A6B and red #E2233B as fully confirmed with no gold or oxblood accent used; another lists navy and red as confirmed but flags secondary oxblood #C0152A and gold #C8A04A references appearing inconsistently elsewhere in the programme. Not resolved here; confirm with SLCB Marketing before final art is produced." }],
+          },
+        ],
+      },
+      {
+        id: "p0-ooh-tv",
+        label: "TV & OOH Media Strategy",
+        items: [
+          { id: "p0-ooh-1", text: "Confirm TV station tier assignments (national reach, Freetown urban, faith and community) against the current national broadcasting register", aaarrr: ["awareness"] },
+          { id: "p0-ooh-2", text: "Confirm the OOH location-typology framework, airport and ferry transit corridor, urban core junctions and markets, provincial hubs, as the media-buying brief for the execution partner", aaarrr: ["awareness"] },
+          {
+            id: "p0-ooh-3",
+            text: "Confirm BTV or a dedicated media-buying agency's contracting status and exact execution-window dates before any site booking or rate negotiation begins",
+            aaarrr: ["awareness"],
+            flags: [{ type: "data-required", note: "Execution-window dates are marked ASSUMED in the source strategy, referenced elsewhere in the programme but not confirmed via a signed statement of work." }],
+          },
+          {
+            id: "p0-ooh-4",
+            text: "Pull the complete national FM radio station register by district before finalising the national radio plan",
+            aaarrr: ["awareness"],
+            flags: [{ type: "data-required", note: "Only one district is verified in the source strategy via the national telecoms regulator's register; other districts are not yet retrieved." }],
+          },
+          {
+            id: "p0-ooh-5",
+            text: "Commission independent TV and radio audience measurement research, since the national regulator does not publish ratings or reach data",
+            aaarrr: ["awareness"],
+            flags: [{ type: "data-required", note: "No published audience-measurement data exists; the source strategy names this as required before final channel selection within each TV tier." }],
+          },
         ],
       },
       {
@@ -404,6 +460,17 @@ export const PM_PHASES: PmPhase[] = [
         ],
       },
       {
+        id: "p1-ooh-tv-launch",
+        label: "OOH & TV: Launch Rotation",
+        items: [
+          { id: "p1-oohtv-1", text: "Air Tier 1 brand-film heavy rotation and Tier 2 launch cut-downs across TV", aaarrr: ["awareness"] },
+          { id: "p1-oohtv-2", text: "Begin the national radio drumbeat", aaarrr: ["awareness"] },
+          { id: "p1-oohtv-3", text: "Activate the Freetown urban OOH corridor: road junctions, motor parks, central market perimeters, and agent point-of-presence signage", aaarrr: ["awareness", "acquisition"] },
+          { id: "p1-oohtv-4", text: "Activate the airport and ferry-terminal transit-corridor placements aimed at diaspora returnees and business travellers", aaarrr: ["awareness"] },
+          { id: "p1-oohtv-5", text: "As urban consolidation begins, add merchant-market OOH placements in Freetown and start Tier 3 faith and community-station financial-literacy content, run as sponsored content where paid budget is constrained", aaarrr: ["awareness", "acquisition"] },
+        ],
+      },
+      {
         id: "p1-review",
         label: "Performance Review Cadence (Ongoing From Launch)",
         items: [
@@ -489,6 +556,14 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p2-out-2", text: "Agent market activation: field teams demo Moni in central markets across all secondary cities", aaarrr: ["acquisition", "activation"] },
           { id: "p2-out-3", text: "SMS campaign in local languages where appropriate", aaarrr: ["awareness"] },
           { id: "p2-out-4", text: "Continue Mi Yone Teller agent buildout in secondary cities alongside Freetown", aaarrr: ["acquisition"] },
+          { id: "p2-out-5", text: "Deploy OOH placements at provincial motor parks, central markets, and agent locations in Bo, Kenema, Makeni, and Koidu, mirroring the urban placement logic rather than isolated roadside boards", aaarrr: ["awareness", "acquisition"] },
+          { id: "p2-out-6", text: "Extend radio-led national reach with regional TV where local signal allows", aaarrr: ["awareness"] },
+          {
+            id: "p2-out-7",
+            text: "Consider OOH placements in border-trade towns feeding cross-border corridor traffic, aligned to the programme's cross-border banking interest",
+            aaarrr: ["awareness"],
+            flags: [{ type: "assumed", note: "The relative traffic and commercial weight of specific provincial and border towns is not ground-truthed in the source strategy; confirm before splitting OOH placement between them." }],
+          },
         ],
       },
       {
@@ -605,6 +680,8 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p4-claim-2", text: "Brand film: real stories of Sierra Leoneans whose financial lives changed with Moni", aaarrr: ["awareness"], owner: "Execution Partner" },
           { id: "p4-claim-3", text: "Outdoor placements in Freetown, if budget permits", aaarrr: ["awareness"], flags: [{ type: "assumed", note: "Source marks this conditional on budget availability." }] },
           { id: "p4-claim-4", text: "MD opinion piece in national press: SLCB Moni's role in Sierra Leone's digital economy", aaarrr: ["awareness"] },
+          { id: "p4-claim-5", text: "Run an NPS-informed creative refresh across TV and OOH, using the first full-year NPS and usage review to guide it", aaarrr: ["awareness", "retention"] },
+          { id: "p4-claim-6", text: "Rotate underperforming OOH sites and expand placement where usage data supports it", aaarrr: ["awareness", "acquisition"] },
         ],
       },
       {
