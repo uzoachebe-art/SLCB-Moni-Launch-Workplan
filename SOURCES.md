@@ -226,3 +226,40 @@ names per item without any further structural change.
   tagging and NPS/belief-shift baseline items remain).
 - Radio (Phase 1): the launch spot corrected to "'Watch It Grow' Creative Concept spot," consistent
   with the Creative Production sequencing correction above.
+
+## Sixth source (Project Management + Risks tabs, added 2026-09-18)
+
+`SLCB_Moni_Agent_Recruitment_Workplan.xlsx` (Workplan/34 rows, KPI Framework/7 metrics, Risk &
+Action Log/6 risks, prepared by Integra Sys Limited, September 2026, marked STRICTLY CONFIDENTIAL on
+the sheet itself). A well-structured, genuinely execution-dense workbook, so nearly all of it passed
+the standing filter.
+
+- **Project Management tab**: added a platform-readiness gate to Agent Network Readiness (the source
+  repeats this same check twice, once as pre-sprint verification and once as a Week 2 risk gate;
+  consolidated into one item here), an agent-count baseline confirmation, and three new sections —
+  Segment A (convert competitor agents), Segment B (recruit new agents/jobseekers), and the Agent
+  Referral Engine (Segment C). Also extended Cultural & Copy Validation (agent script/testimonial
+  validation) and Performance Review Cadence (agent-specific tracking and reporting items).
+- **Risks & Assumptions tab**: added all 6 risks from the source's Risk & Action Log, each with its
+  own mitigation and owner folded into the mitigation text.
+- **Excluded per the standing no-figures rule**: every specific quota, percentage, and count target
+  in the source's KPI Framework sheet (monthly per-officer quota, training completion rate,
+  transaction-volume growth, distribution-mix share, and the cumulative year-end agent-count target)
+  — tasks that reference a quota or target are described without stating the number.
+- **Conflict surfaced, not resolved**: the source's own KPI Framework sheet states that three
+  internal SLCB documents give differing overall agent-count targets, and points to "Workplan tab,
+  Section 1" for a reconciliation action that does not actually appear as a named task there. Flagged
+  on the agent-baseline item without reproducing any of the three figures.
+
+## Sequencing tab added (2026-09-18)
+
+A fifth tab, built at Uzo's request ("act as a senior GTM/deployment strategist... sequence the
+different line items"). Rather than duplicating Project Management content, `sequencing.ts` groups
+every one of the PM tab's 38 sections into 8 dependency-based "waves" (`src/lib/data/sequencing.ts`),
+resolved live against `PM_PHASES` at render time — there is no forked copy of any item text, so the
+two tabs cannot drift out of sync with each other. One item (the Mi Yone Teller platform-readiness
+gate) is cross-referenced into Wave 1 by id even though its home section sits in Wave 3, since it's a
+universal blocker rather than a Field & Channel Readiness task specifically. Wave ordering reflects
+GTM sequencing logic (brand/platform sign-off, then build/train, then field readiness, then a
+go/no-go gate, then simultaneous launch, then concurrent review alongside amplification and category
+dominance) rather than the Phase 0-4 thematic grouping used in the Project Management tab itself.

@@ -49,6 +49,42 @@ export const RISKS: Risk[] = [
     impact: "CRM, email, or analytics tools fail to integrate with the platform.",
     mitigation: "Conduct early integration testing, document dependencies, and maintain fallback workflows.",
   },
+  {
+    id: "risk-9",
+    risk: "Competitor Agents See No Reason to Switch (Segment A)",
+    impact: "\"Why add a second wallet when Orange Money / Afrimoney already works for me?\" is the objection field officers meet most often, and risks stalling conversion of competitor agents entirely.",
+    mitigation: "Frame SLCB Moni as an addition, not a replacement. Field officers are scripted to never counter-argue a competitor's value. Owner: Field Officers.",
+  },
+  {
+    id: "risk-10",
+    risk: "Recruitment Campaign Outruns Platform Readiness",
+    impact: "Mi Yone Teller is still under process review and CBS has no real-time integration; a recruitment push ahead of platform readiness risks onboarding agents onto a system that cannot reliably process or pay them.",
+    mitigation: "Confirm the platform readiness gate with the Head of Digital Technology before any field push begins. Owner: Head of Digital Technology.",
+  },
+  {
+    id: "risk-11",
+    risk: "Referral Fraud in the Agent Referral Engine (Segment C)",
+    impact: "Agents may name non-genuine referrals purely to claim the first-tier reward.",
+    mitigation: "Two-tier reward structure (logged referral plus converted agent) plus a non-performer guardrail that forfeits the reward if the referred agent underperforms. Owner: Agent Network Coordinators.",
+  },
+  {
+    id: "risk-12",
+    risk: "Non-Literate Agents Excluded by Written-Only Materials (Segment A)",
+    impact: "Written comparison sheets and scripts alone exclude a meaningful share of the target agent population who cannot read them.",
+    mitigation: "Mandatory dual-channel onboarding design: a pictogram flow for non-literate agents alongside the written comparison sheet. Owner: Digital Squad.",
+  },
+  {
+    id: "risk-13",
+    risk: "Agent Recruitment Scripts Used Before Cultural Validation (Segments A/B)",
+    impact: "Field content deployed without validation risks the same cultural and linguistic missteps flagged elsewhere in this programme.",
+    mitigation: "[ASSUMED] Content held until cultural consultant sign-off, per standing SLCB convention across this programme. Owner: Cultural Consultant.",
+  },
+  {
+    id: "risk-14",
+    risk: "Referral Bonus Quantum Undefined (Segment C)",
+    impact: "No verified programme budget figure exists for the referral bonus; the mechanic cannot be finalized or communicated to agents without one.",
+    mitigation: "Confirm the bonus quantum with the CFO and Head of Digital Banking before finalizing the mechanic. Owner: CFO.",
+  },
 ];
 
 export const ASSUMPTIONS: Assumption[] = [

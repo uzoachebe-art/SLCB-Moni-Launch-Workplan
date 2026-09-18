@@ -8,6 +8,7 @@ import { GanttView } from "@/components/GanttView";
 import { MatrixView } from "@/components/MatrixView";
 import { RiskView } from "@/components/RiskView";
 import { ProjectManagementView } from "@/components/ProjectManagementView";
+import { SequencingView } from "@/components/SequencingView";
 import { PM_PHASES } from "@/lib/data/projectManagement";
 import { ViewToggle, ViewMode, WorkstreamFilter, AaarrrFilter, Legend } from "@/components/Controls";
 
@@ -55,6 +56,7 @@ export default function Home() {
         {view === "matrix" && <MatrixView activities={filtered} workstreams={visibleWorkstreams} />}
         {view === "risks" && <RiskView risks={RISKS} assumptions={ASSUMPTIONS} />}
         {view === "pm" && <ProjectManagementView phases={PM_PHASES} selectedAaarrr={selectedAaarrr} />}
+        {view === "sequencing" && <SequencingView phases={PM_PHASES} />}
       </div>
     </main>
   );
