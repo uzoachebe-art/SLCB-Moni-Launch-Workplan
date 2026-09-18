@@ -1,5 +1,5 @@
 // Sequencing view: groups every Project Management section into execution-order waves,
-// independent of the Phase 0-4 thematic grouping used elsewhere. A "wave" is not a date range —
+// independent of the Phase 0-4 thematic grouping used elsewhere. A "wave" is not a date range;
 // it's a dependency position (what must close before the next wave can safely start). Built by
 // referencing existing PM section/item ids live, so it can never drift out of sync with the
 // Project Management tab's own content.
@@ -42,6 +42,7 @@ export const SEQUENCING_STAGES: SequencingStage[] = [
       "p0-creative",
       "p0-ambassador",
       "p0-measurement",
+      "dp-plan",
     ],
   },
   {
@@ -69,16 +70,16 @@ export const SEQUENCING_STAGES: SequencingStage[] = [
     rationale:
       "The public, customer-facing launch. Radio, SMS, social, branch, agent, PR, and ambassador activity all go live simultaneously, per the source strategy's own 'zero silence, zero gaps' framing. Nothing here can start before Wave 4 closes.",
     blockedBy: ["wave-4"],
-    sectionIds: ["p1-launchday", "p1-radio", "p1-sms", "p1-social", "p1-branch", "p1-agent", "p1-pr", "p1-ambassador"],
+    sectionIds: ["p1-launchday", "p1-radio", "p1-sms", "p1-social", "p1-branch", "p1-agent", "p1-pr", "p1-ambassador", "p1-qr-stickers", "p1-traditional-media", "dp-deployment"],
   },
   {
     id: "wave-6",
     order: 6,
     label: "Wave 6: Sustain & Review (Concurrent From Launch Onward)",
     rationale:
-      "This does not run after Wave 5, it runs alongside every wave from launch onward. Placed here in the sequence only because it cannot start before there's a campaign to review. Weekly, monthly, and quarterly reviews are what let every later wave be corrected mid-flight instead of discovered broken at Month 12.",
+      "This does not run after Wave 5, it runs alongside every wave from launch onward. Placed here in the sequence only because it cannot start before there's a campaign to review. Weekly, monthly, and quarterly reviews, plus paid media reporting and measurement, are what let every later wave be corrected mid-flight instead of discovered broken at Month 12.",
     blockedBy: ["wave-5"],
-    sectionIds: ["p1-review"],
+    sectionIds: ["p1-review", "dp-reporting", "dp-measurement"],
     concurrent: true,
   },
   {

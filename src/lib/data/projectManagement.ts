@@ -92,6 +92,28 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p0-product-2", text: "Resolve all unreconciled GL settlements (Africell, Orange, EDSA)", aaarrr: ["activation"] },
           { id: "p0-product-3", text: "Activate and test cash-in/cash-out features across all branches", aaarrr: ["activation"] },
           { id: "p0-product-4", text: "Activate and test merchant payment QR at pilot merchant locations", aaarrr: ["activation", "acquisition"] },
+          {
+            id: "p0-product-5",
+            text: "Audit telco SMS/OTP gateway reliability and put a delivery-speed SLA in place with the SMS provider",
+            aaarrr: ["activation"],
+            owner: "IT + Digital",
+            flags: [{ type: "conflict", note: "Hard gate: the source strategy names this as the first of three fixes required before any digital campaign launches, ahead of any external comms." }],
+          },
+          {
+            id: "p0-product-6",
+            text: "Audit the salary-advance flow on funded accounts, fix the specific error conditions, and regression-test before any salary-linked campaign runs",
+            aaarrr: ["activation"],
+            owner: "IT + Retail Banking",
+            flags: [{ type: "conflict", note: "Hard gate, same source and reasoning as the SMS/OTP gateway item above." }],
+          },
+          {
+            id: "p0-product-7",
+            text: "Build self-service card unblock via USSD and the WhatsApp bot, removing the branch-visit requirement",
+            aaarrr: ["activation", "retention"],
+            owner: "Digital + Card Ops",
+            flags: [{ type: "conflict", note: "Third of the three pre-campaign product fixes named in the source strategy." }],
+          },
+          { id: "p0-product-8", text: "Publish system uptime monthly and publicly, as a standing transparency commitment rather than an internal metric only", aaarrr: ["retention"], owner: "IT + Operations" },
         ],
       },
       {
@@ -102,6 +124,10 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p0-training-2", text: "Certification: each staff member demos Moni enrolment within the standard time target", aaarrr: ["activation"] },
           { id: "p0-training-3", text: "Issue objection-handling scripts; rehearse common failure scenarios", aaarrr: ["activation"] },
           { id: "p0-training-4", text: "Designate a Digital Champion per branch, incentivised per enrolment", aaarrr: ["activation", "acquisition"] },
+          { id: "p0-training-5", text: "Install a dedicated digital enrolment station (tablet, pre-loaded with USSD and wallet registration) at every branch front desk", aaarrr: ["acquisition", "activation"] },
+          { id: "p0-training-6", text: "Standardise and measure a short teller enrolment script used at every branch interaction", aaarrr: ["activation"] },
+          { id: "p0-training-7", text: "Launch a bank-wide staff digital-onboarding referral programme, tracked and paid monthly, distinct from the per-branch Digital Champion incentive", aaarrr: ["activation", "acquisition"] },
+          { id: "p0-training-8", text: "Stand up a digital help desk per branch for customers who hit problems going digital, so the issue is resolved in-branch before it becomes churn", aaarrr: ["retention"] },
         ],
       },
       {
@@ -289,6 +315,9 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p1-sms-2", text: "Monthly draw reminder ahead of each draw", aaarrr: ["retention"] },
           { id: "p1-sms-3", text: "Winner announcement to all customers within 24 hours of each draw", aaarrr: ["retention", "referral"] },
           { id: "p1-sms-4", text: "Track SMS opt-out rate", aaarrr: ["retention"] },
+          { id: "p1-sms-5", text: "Run an automated onboarding SMS drip from account or wallet opening through day 30, each message tied to a specific next action", aaarrr: ["activation", "retention"] },
+          { id: "p1-sms-6", text: "Run an automated re-engagement SMS drip triggered at 30 days of customer inactivity", aaarrr: ["retention"] },
+          { id: "p1-sms-7", text: "Add a permanent 'Refer a Friend' prompt to the USSD menu, alongside a skippable promotional splash screen at login", aaarrr: ["referral", "acquisition"] },
         ],
       },
       {
@@ -356,6 +385,25 @@ export const PM_PHASES: PmPhase[] = [
         ],
       },
       {
+        id: "p1-qr-stickers",
+        label: "QR Sticker Distribution Campaign",
+        items: [
+          { id: "p1-qr-1", text: "Produce and distribute QR stickers at priority surfaces: market stalls, taxis and poda-podas, pharmacies and petrol stations, university noticeboards, and every branch and agent point", aaarrr: ["awareness", "acquisition"] },
+          { id: "p1-qr-2", text: "Assign a unique, location-attributed QR code per placement type so every scan's source is tracked", aaarrr: ["acquisition"] },
+          { id: "p1-qr-3", text: "Route every scan straight into the WhatsApp chatbot's account-opening flow, with a USSD number printed on the sticker as the no-smartphone fallback", aaarrr: ["acquisition", "activation"] },
+          { id: "p1-qr-4", text: "Monitor scan volume per location; trigger a merchant-officer visit and priority restock at high-performing sites, and replace non-performing placements", aaarrr: ["acquisition"] },
+        ],
+      },
+      {
+        id: "p1-traditional-media",
+        label: "Traditional Media Content Rules (Radio, Billboard, TV)",
+        items: [
+          { id: "p1-trad-1", text: "Apply a single-message, QR-coded, attribution-tracked content rule to every billboard and outdoor placement", aaarrr: ["awareness", "acquisition"] },
+          { id: "p1-trad-2", text: "Cast real customers, not actors, in all broadcast TV content, consistent with the programme's existing testimonial approach", aaarrr: ["awareness"] },
+          { id: "p1-trad-3", text: "Treat community radio live-reads by local presenters as endorsement, not advertising; brief presenters accordingly rather than scripting a straight ad read", aaarrr: ["awareness"] },
+        ],
+      },
+      {
         id: "p1-review",
         label: "Performance Review Cadence (Ongoing From Launch)",
         items: [
@@ -372,6 +420,58 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p1-review-6", text: "Run corrective coaching for any field officer tracking below quota mid-sprint", aaarrr: ["acquisition", "activation"], owner: "Provincial Coordinators / MD" },
           { id: "p1-review-7", text: "Issue a monthly agent KPI dashboard to MD and C-Suite covering agent volume, training completion, and referral share", aaarrr: ["retention"], owner: "Data Analyst / Integra" },
           { id: "p1-review-8", text: "Run a quarterly strategic review of the agent recruitment programme against its targets", aaarrr: ["retention", "revenue"], owner: "Digital Strategy Consultant / MD" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "digital-paid-media",
+    label: "Digital Paid Media",
+    intro:
+      "Paid comes last, deliberately. The programme's own product strategy sequences growth as Fix, then Reliable, then Referral, then Paid: paid spend is not authorised until the product-reliability fixes are confirmed and organic/referral mechanics are already seeded. This is not one of the source's five campaign phases; it is a cross-cutting workstream that starts planning in parallel with Ignition Launch and scales through Amplification.",
+    sections: [
+      {
+        id: "dp-plan",
+        label: "Digital Paid Media Plan",
+        items: [
+          { id: "dp-plan-1", text: "Define the paid social platform mix and audience-targeting logic (Facebook-primary, Instagram secondary, WhatsApp dark posts), mapped to the AAARRR stage each placement is meant to serve", aaarrr: ["awareness", "acquisition"] },
+          {
+            id: "dp-plan-2",
+            text: "Confirm paid spend does not begin until the three product-reliability fixes are confirmed and BSL regulatory clearance on any incentive-linked creative is in writing",
+            aaarrr: ["activation"],
+            flags: [{ type: "conflict", note: "Hard gate, per the source strategy's own Fix, Reliable, Referral, Paid sequencing and the existing BSL clearance gate already in this tab's Regulatory & Legal section." }],
+          },
+          { id: "dp-plan-3", text: "Set up the ad account structure, campaign naming convention, and creative-approval workflow before any placement goes live", aaarrr: ["activation"] },
+          { id: "dp-plan-4", text: "Build the paid media calendar for the amplification window, sequenced to scale only after Ignition-phase organic and referral performance is confirmed", aaarrr: ["acquisition"] },
+        ],
+      },
+      {
+        id: "dp-deployment",
+        label: "Digital Paid Media Deployment",
+        items: [
+          { id: "dp-dep-1", text: "Launch always-on paid dark-post acquisition targeting the primary urban segment in Freetown and secondary cities", aaarrr: ["acquisition"] },
+          { id: "dp-dep-2", text: "Launch retargeting campaigns for funnel drop-offs: app download started but not completed, USSD dial without registration completion", aaarrr: ["acquisition", "retention"] },
+          { id: "dp-dep-3", text: "Scale paid spend into the amplification window once Ignition-phase organic and referral performance is confirmed", aaarrr: ["acquisition"] },
+          { id: "dp-dep-4", text: "Pause or reallocate spend away from underperforming placements based on weekly performance data", aaarrr: ["acquisition", "revenue"] },
+        ],
+      },
+      {
+        id: "dp-reporting",
+        label: "Weekly Reporting & Milestones",
+        items: [
+          { id: "dp-report-1", text: "Issue a weekly paid media performance snapshot (spend pacing, delivery, engagement) to Marketing and the Execution Partner", aaarrr: ["retention"] },
+          { id: "dp-report-2", text: "Flag any campaign underperforming against its own prior-week baseline for creative refresh or budget reallocation", aaarrr: ["retention"] },
+          { id: "dp-report-3", text: "Record milestone completions (ad accounts live, first creative set live, retargeting live, reallocation decisions) against the campaign calendar", aaarrr: ["retention"] },
+        ],
+      },
+      {
+        id: "dp-measurement",
+        label: "Measurement",
+        items: [
+          { id: "dp-meas-1", text: "Implement UTM tagging and platform-native conversion tracking on every paid placement", aaarrr: ["acquisition"], flags: [{ type: "assumed", note: "Shares the same UTM tagging infrastructure already listed under Measurement Infrastructure in Phase 0, rather than a separate tracking build." }] },
+          { id: "dp-meas-2", text: "Track cost per acquisition by channel and segment; no fixed target published until a baseline exists", aaarrr: ["acquisition", "revenue"] },
+          { id: "dp-meas-3", text: "Attribute USSD registrations and wallet activations back to their originating paid campaign via unique tracking codes", aaarrr: ["acquisition"] },
+          { id: "dp-meas-4", text: "Feed paid media performance into the existing weekly and monthly Performance Review Cadence rather than running a separate review process", aaarrr: ["retention"] },
         ],
       },
     ],
@@ -459,6 +559,7 @@ export const PM_PHASES: PmPhase[] = [
           { id: "p3-merch-2", text: "SME merchant track: printed QR card distribution", aaarrr: ["acquisition"] },
           { id: "p3-merch-3", text: "Micro/informal merchant track: market-stall QR distribution via agent network", aaarrr: ["acquisition"] },
           { id: "p3-merch-4", text: "Time-limited zero-processing-fee incentive for merchants who onboard early", aaarrr: ["acquisition", "revenue"] },
+          { id: "p3-merch-5", text: "Identify Sierra Leonean digital platform partners (e-commerce, logistics, or directory) for a bundled SME banking-plus-listing offer", aaarrr: ["acquisition", "revenue"] },
         ],
       },
       {

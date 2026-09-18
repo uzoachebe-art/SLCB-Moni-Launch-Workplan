@@ -263,3 +263,50 @@ universal blocker rather than a Field & Channel Readiness task specifically. Wav
 GTM sequencing logic (brand/platform sign-off, then build/train, then field readiness, then a
 go/no-go gate, then simultaneous launch, then concurrent review alongside amplification and category
 dominance) rather than the Phase 0-4 thematic grouping used in the Project Management tab itself.
+
+## Seventh source (Project Management tab + new Digital Paid Media phase, added 2026-09-18)
+
+`SLCB_Complete_Strategy.pptx.pdf` ("SLCB Optimised Digital Revenue & Growth Strategy," Uzo Achebe,
+April 2026, 23 slides). Re-read in full for this addition (previously only summarized at a high
+level earlier in this engagement). Notably, this document's own "Digital Marketing Strategy" section
+is about product-led growth and organic distribution, not paid advertising — it explicitly frames
+the sequence as "Fix, then Reliable, then Referral, then Paid" and cites a zero-paid-marketing
+benchmark. There is no paid-media plan to extract from this source; the Digital Paid Media phase
+described below was built separately, using the "Paid Digital Media Amplification" deliverable
+already established in the Execution Partner's own scope (Gantt/Matrix tab) plus standard paid-media
+practice, and sequenced per this document's own Fix-Reliable-Referral-Paid logic.
+
+**Genuinely new items extracted and added to existing sections** (all passed the standing
+"must drive AAARRR execution" filter):
+- Product Stability (Phase 0): three pre-campaign product-reliability fixes the source names as
+  hard gates before any digital campaign launches (SMS/OTP gateway SLA, salary-advance flow audit,
+  self-service card unblock), plus a monthly public uptime-publication commitment.
+- Staff Training (Phase 0): an in-branch digital enrolment station, a standardised teller script, a
+  bank-wide staff referral programme (distinct from the existing per-branch Digital Champion
+  incentive), and a per-branch digital help desk.
+- SMS Blast (Phase 1): an automated onboarding drip (day 0-30) and re-engagement drip (30-day
+  inactivity trigger), plus a permanent USSD "Refer a Friend" prompt.
+- Merchant QR Expansion (Phase 3): identifying Sierra Leonean digital platform partners for a
+  bundled SME banking-plus-listing offer.
+- Two new Phase 1 sections: QR Sticker Distribution Campaign (attribution-tracked placement at
+  market stalls, transport, pharmacies, campuses, branches) and Traditional Media Content Rules
+  (one-message-per-billboard with QR attribution, real customers not actors in TV content, radio
+  live-reads treated as endorsement not advertising).
+- **Excluded per the standing no-figures rule**: every specific count in the source (50,000 stickers,
+  the exact SMS message copy with cashback amounts, the 9-university/4K-student campus figures, the
+  700-agent/2,500-merchant/SLE 60M targets already covered elsewhere) — tasks describe the mechanic,
+  not the number.
+
+## Digital Paid Media phase added (2026-09-18, at Uzo's explicit request)
+
+A new cross-cutting phase (not one of the source strategy's five campaign phases), with the four
+subsections named in the request: Digital Paid Media Plan, Digital Paid Media Deployment, Weekly
+Reporting & Milestones, and Measurement. Positioned between Phase 1 and Phase 2 in the Project
+Management tab's display order, but split across three different Sequencing-tab waves to reflect
+when each subsection actually happens: the Plan subsection sits in Wave 2 (Build, Train & Validate,
+since it's pre-launch setup), Deployment sits in Wave 5 (Ignition Launch, where paid spend actually
+goes live), and Reporting/Measurement sit in Wave 6 (Sustain & Review, since they're ongoing/
+concurrent activities). No monetary or KPI figures appear anywhere in this phase, consistent with
+every other tab. The plan's own hard gate (paid spend does not begin until the three product-fix
+gates and BSL clearance are confirmed) cross-references the existing Regulatory & Legal section
+rather than duplicating it.
