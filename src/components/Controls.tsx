@@ -9,8 +9,8 @@ export function ViewToggle({ view, onChange }: { view: ViewMode; onChange: (v: V
   const opts: { key: ViewMode; label: string }[] = [
     { key: "gantt", label: "Gantt / Timeline" },
     { key: "matrix", label: "Matrix / Table" },
-    { key: "pm", label: "Project Management" },
     { key: "sequencing", label: "Sequencing" },
+    { key: "pm", label: "Project Management" },
     { key: "risks", label: "Risks & Assumptions" },
   ];
   return (
