@@ -164,9 +164,9 @@ export const PM_PHASES: PmPhase[] = [
         items: [
           {
             id: "p0-agent-0",
-            text: "Confirm the Mi Yone Teller platform readiness gate (CBS stability, onboarding and payout flow) before any field recruitment push begins",
+            text: "Confirm the SLCB Moni and Mi Yone Teller platform readiness gate (CBS stability, onboarding and payout flow) before any field recruitment push begins",
             aaarrr: ["activation"],
-            owner: "Head of Digital Technology / CIO",
+            owner: "Head of E-Channels / Head Digital Banking & Financial Inclusion / Head of Retail / CIO",
             flags: [{ type: "conflict", note: "Hard gate: recruitment activity in the Segment A, Segment B, and Referral Engine sections below all depend on this closing first. The source workplan itself repeats this same check twice (once as a pre-sprint verification, once as a Week 2 risk gate); consolidated here into a single item." }],
           },
           { id: "p0-agent-1", text: "Mi Yone Teller agent trainings and certified in SLCB Moni, Osusu, Moni Savings Circle registration", aaarrr: ["acquisition", "activation"] },
