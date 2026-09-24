@@ -179,4 +179,27 @@ export const ASSUMPTIONS: Assumption[] = [
     implication: "Confirm scope and budget authority for Months 13-18 before Phase 4 of the OOH/TV workplan is finalized.",
     unresolved: true,
   },
+  {
+    id: "assum-14",
+    name: "Digital-Literacy Programme Deadline",
+    description:
+      "The Digital Banking Strategy names 'by 2027' without a specific date. The digital-literacy programme strategy proposes 31 December 2027 as the working deadline, but if the intended date is 1 January 2027 the required monthly training pace roughly triples.",
+    implication: "Confirm the exact completion date with SLCB before the monthly and daily delivery pace is finalized.",
+    unresolved: true,
+  },
+  {
+    id: "assum-15",
+    name: "Digital-Literacy Baseline (Trained to Date)",
+    description: "No figure exists yet for how many people have already been trained under any definition, digital-literacy or otherwise.",
+    implication: "Confirm the baseline before finalizing the outstanding monthly requirement; any confirmed baseline lowers it.",
+    unresolved: true,
+  },
+  {
+    id: "assum-16",
+    name: "Branch Count for Training Delivery",
+    description:
+      "The cascade training deck and the promotional strategy analysis name different total branch counts, without a reconciled figure between them.",
+    implication: "Confirm the correct branch count with SLCB before finalizing the branch-teller share of the digital-literacy delivery plan.",
+    unresolved: true,
+  },
 ];

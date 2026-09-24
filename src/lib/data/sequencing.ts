@@ -43,6 +43,7 @@ export const SEQUENCING_STAGES: SequencingStage[] = [
       "p0-ooh-tv",
       "p0-ambassador",
       "p0-measurement",
+      "p0-digital-literacy",
       "dp-plan",
     ],
   },
@@ -71,7 +72,7 @@ export const SEQUENCING_STAGES: SequencingStage[] = [
     rationale:
       "The public, customer-facing launch. Radio, SMS, social, branch, agent, PR, and ambassador activity all go live simultaneously, per the source strategy's own 'zero silence, zero gaps' framing. Nothing here can start before Wave 4 closes.",
     blockedBy: ["wave-4"],
-    sectionIds: ["p1-launchday", "p1-radio", "p1-sms", "p1-social", "p1-branch", "p1-agent", "p1-pr", "p1-ambassador", "p1-qr-stickers", "p1-traditional-media", "p1-ooh-tv-launch", "dp-deployment"],
+    sectionIds: ["p1-launchday", "p1-radio", "p1-sms", "p1-social", "p1-branch", "p1-digital-literacy", "p1-agent", "p1-pr", "p1-ambassador", "p1-qr-stickers", "p1-traditional-media", "p1-ooh-tv-launch", "dp-deployment"],
   },
   {
     id: "wave-6",
@@ -90,7 +91,7 @@ export const SEQUENCING_STAGES: SequencingStage[] = [
     rationale:
       "Geographic expansion, the women's savings-circle track, the WhatsApp bot, SME and youth tracks, and merchant QR expansion all build on proof from the Ignition wave. The source strategy is explicit that this wave doesn't start until Freetown has proven the model.",
     blockedBy: ["wave-5"],
-    sectionIds: ["p2-outside", "p2-mamasabi", "p2-whatsapp", "p2-digital", "p3-biznis", "p3-youth", "p3-merchant", "p3-content"],
+    sectionIds: ["p2-outside", "p2-mamasabi", "p2-digital-literacy", "p2-whatsapp", "p2-digital", "p3-biznis", "p3-youth", "p3-merchant", "p3-content"],
   },
   {
     id: "wave-8",

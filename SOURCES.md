@@ -378,3 +378,71 @@ distributed across those instead of duplicating the phase structure.
   Consultant, not the Execution Partner, so adding their content there would break that tab's standing
   fidelity rule. Everything extracted from both documents therefore lives only in the Project
   Management, Sequencing, and Risks & Assumptions tabs.
+
+## Tenth source (Project Management, Sequencing, Risks & Assumptions tabs, added 2026-09-24)
+
+`SLCB_Digital_Literacy_50K_Programme.pptx` (digital literacy programme design for staff and customers,
+targeting 50,000 people trained in digital banking by 2027, Strategy Pillar 4: Financial Inclusion &
+Literacy, iNTEGRA Sys Limited, September 2026, 13 slides). A genuinely execution-dense document —
+delivery mechanics, a proposed measurement definition, and a phased channel model — so most of it
+passed the standing "must drive AAARRR execution" filter, distributed across three existing phases
+rather than a new top-level one.
+
+- **New Phase 0 section "Digital Literacy Programme: Foundations & Tracking"** (7 items): sign-off on
+  a single working definition of "trained" (one live, self-completed, phone-number-logged transaction,
+  flagged `assumed` since the source proposes but does not confirm it), extending the already-planned
+  Branch Digital Migration Tracker to capture training entries (flagged as a hard gate, since the
+  source states the tracker itself is still pending approval and the core banking system has no
+  real-time integration to count transactions automatically), a weekly de-duplication reconciliation
+  step, and four `data-required` confirmations the source itself lists as blocking: the programme
+  deadline, channel-planning inputs (tellers per branch, active agents, institutional headcounts,
+  staff count), the baseline number already trained, and the branch count used for planning.
+- **New Phase 1 section "Digital Literacy Programme: Branch & Institutional Delivery"** (7 items): a
+  counting rule for teller-assisted training (credit only self-completed transactions), a PIN-safety
+  and scam-awareness opening for every session, a banking-hall queue-screen loop (flagged
+  `data-required` and explicitly scoped as awareness-only, not a counted completion, since the
+  customer isn't transacting personally), payday sessions for police and military at pay points
+  (flagged `data-required` for headcounts), campus fee-deadline sessions with a "teach one family
+  member" step (flagged `assumed, to test`, per the source's own framing), a youth-ambassador
+  household challenge (flagged `uzo-to-confirm`, cross-referenced to the existing Suad Baydoun
+  ambassador section, since the source notes branding was not engaged in the last Youth Day activity
+  and asks that this be fixed first), and holding the congregation-wide rollout until Moni Wallet
+  goes live (flagged as a hard gate, cross-referencing the same go-live dependency used elsewhere in
+  this tab).
+- **New Phase 2 section "Digital Literacy Programme: Agent & Community Delivery"** (4 items): training
+  informal savings clubs as whole groups (flagged `data-required` for fit with a group savings
+  product), paying agents a bounty only on a verified proof transaction rather than headcount
+  (flagged `data-required` for rate and BSL clearance), a weekly local-language radio dial-along
+  segment (flagged `assumed` pending Krio/Temne/Mende cultural-consultant validation, consistent with
+  the standing rule already applied to language content elsewhere in this programme), and a small
+  airtime completion reward (flagged `data-required` for cost and BSL clearance).
+- **Reporting cross-reference added**, not a new section: a new item in the existing Performance
+  Review Cadence section reporting the digital-literacy trained count by channel each month alongside
+  30-day active-use figures on Moni Wallet and USSD, per the source's own point that training is the
+  input and active use is the outcome, and the two should be reported side by side.
+- **Existing agent-count conflict flag extended, not duplicated:** this source corroborates the
+  agent-count conflict already flagged on `p0-agent-5` (naming two of the three documents already
+  referenced there); the existing flag's note was extended to record the corroboration without adding
+  a fourth figure.
+- **New conflict surfaced:** the source's own risk slide notes that two internal SLCB documents (the
+  cascade training deck and the promotional strategy analysis) give different total branch counts.
+  Flagged on a new item in the Foundations & Tracking section without reproducing either figure,
+  consistent with this tab's standing rule.
+- **Excluded per the standing no-figures rule:** the 50,000 headline target itself, and every
+  percentage, per-day, per-month, and per-teller figure the source uses to derive it (the 15-month
+  window, the 3,333/month and 152/day derived figures, the ≈30 tellers/day figure, the channel-split
+  percentages, and the three phase-by-phase cumulative targets). Tasks describe the mechanic the
+  figure would drive, not the number itself. The 26/100 national digital-literacy baseline score and
+  the other UNCDF/MFW4A context statistics on the source's second slide are landscape evidence, not
+  an execution task, and were excluded entirely along with the rest of that slide's "why this
+  programme is needed" framing.
+- **New assumptions added to Risks & Assumptions** (`assum-14` through `assum-16`): the digital-
+  literacy programme deadline (the source proposes 31 December 2027 but flags that an earlier reading
+  of "by 2027" would roughly triple the required pace), the trained-to-date baseline (no figure exists
+  yet), and the branch-count conflict noted above. All marked `unresolved: true`.
+- **Sequencing tab updated** to preserve 1:1 coverage: `p0-digital-literacy` added to Wave 2 (Build,
+  Train & Validate), `p1-digital-literacy` added to Wave 5 (Ignition Launch), `p2-digital-literacy`
+  added to Wave 7 (Amplification & Deepening). Verified by cross-check script: all 49 Project
+  Management sections are referenced in exactly one Sequencing wave, no duplicates, no gaps.
+- **Gantt/Matrix tab deliberately not touched**, for the same reason as the ninth source above: this
+  document originates from the Digital Strategy Consultant, not the Execution Partner.
