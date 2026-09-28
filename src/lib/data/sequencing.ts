@@ -1,8 +1,8 @@
-// Sequencing view: groups every Project Management section into execution-order waves,
+// Sequencing view: groups every Project Charter section into execution-order waves,
 // independent of the Phase 0-4 thematic grouping used elsewhere. A "wave" is not a date range;
 // it's a dependency position (what must close before the next wave can safely start). Built by
 // referencing existing PM section/item ids live, so it can never drift out of sync with the
-// Project Management tab's own content.
+// Project Charter tab's own content.
 
 export interface SequencingStage {
   id: string;

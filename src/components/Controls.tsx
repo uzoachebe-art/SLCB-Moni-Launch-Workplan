@@ -10,7 +10,7 @@ export function ViewToggle({ view, onChange }: { view: ViewMode; onChange: (v: V
     { key: "gantt", label: "Gantt / Timeline" },
     { key: "matrix", label: "Matrix / Table" },
     { key: "sequencing", label: "Sequencing" },
-    { key: "pm", label: "Project Management" },
+    { key: "pm", label: "Project Charter" },
     { key: "risks", label: "Risks & Assumptions" },
   ];
   return (

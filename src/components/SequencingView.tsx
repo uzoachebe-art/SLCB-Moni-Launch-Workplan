@@ -43,7 +43,7 @@ export function SequencingView({ phases }: { phases: PmPhase[] }) {
     <div className="space-y-4">
       <div className="text-xs text-gray-500 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
         Execution order, not a timeline: what has to close before the next wave can safely start.
-        Every section listed here lives in the Project Management tab; nothing is duplicated, this
+        Every section listed here lives in the Project Charter tab; nothing is duplicated, this
         view just reorders it by dependency instead of by phase theme.
       </div>
 
