@@ -23,12 +23,20 @@ function RaciRow({ item }: { item: PmItem }) {
           <span
             key={key}
             title={hint}
-            className={`text-[10px] rounded px-1 py-0.5 border ${name ? "border-gray-300 bg-gray-50 text-gray-600" : "border-dashed border-gray-200 text-gray-300"}`}
+            className={`text-[10px] rounded px-1 py-0.5 border ${name ? "border-gray-300 bg-gray-50 text-gray-800" : "border-dashed border-gray-200 text-gray-300"}`}
           >
-            <span className="font-bold">{label}:</span> {name ?? "TBC"}
+            <span className="font-bold">{label}:</span> {name ? <span className="font-bold">{name}</span> : "TBC"}
           </span>
         );
       })}
+      {item.timeline && (
+        <span
+          title="Timeline"
+          className="text-[10px] rounded px-1 py-0.5 border border-brandred-50 bg-brandred-50 text-brandred-dark font-bold"
+        >
+          {item.timeline}
+        </span>
+      )}
     </div>
   );
 }
@@ -69,10 +77,11 @@ export function ProjectManagementView({
   return (
     <div className="space-y-4">
       <div className="text-xs text-gray-500 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
-        What needs to be done, grouped by campaign phase, not a timeline. Source: the 18-month
-        &quot;Watch It Grow&quot; campaign strategy. Checkboxes are for your own reading session only;
-        they are not saved. Each item carries a RACI (Responsible, Accountable, Consulted, Informed)
-        assignment; names marked TBC are still to be filled in.
+        What needs to be done, grouped by campaign phase. Source: the 18-month &quot;Watch It
+        Grow&quot; campaign strategy. Checkboxes are for your own reading session only; they are not
+        saved. Each item carries a RACI (Responsible, Accountable, Consulted, Informed) assignment;
+        names marked TBC are still to be filled in. Where SLCB has confirmed a delivery date for a
+        specific item, it appears as a bold red timeline chip next to the RACI names.
       </div>
 
       {filteredPhases.map((phase) => (

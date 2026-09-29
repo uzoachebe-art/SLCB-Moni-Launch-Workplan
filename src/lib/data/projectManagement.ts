@@ -2,10 +2,13 @@ import { AaarrrStage, Flag } from "../types";
 
 // Source: SLCB_Moni_18Month_Campaign_v2.pptx ("Watch It Grow", TBWA Disruption® strategic
 // framework, prepared by Uzo Achebe, Sept 2026), slides 13-24, reconciled with the user's own
-// supplied Pre-Launch list (2026-09-16). This tab intentionally carries NO dates/timeline and NO
-// monetary or KPI-count figures; it exists to show what needs to be done, not when or how much,
+// supplied Pre-Launch list (2026-09-16). This tab intentionally carries NO campaign-phase dates and
+// NO monetary or KPI-count figures; it exists to show what needs to be done, not when or how much,
 // per instruction. See SOURCES.md for full provenance and the two internal date conflicts in the
 // source deck (merchant-QR gate: Month 12 vs Month 18; agent-network gate: Month 9 vs Month 12).
+// The per-item `timeline` field is a distinct, later exception (2026-09-29): it carries only a real
+// delivery date SLCB has confirmed against a specific item's own RACI assignment, never an invented
+// or campaign-phase date. Left unset, an item shows no timeline chip.
 
 export interface Raci {
   responsible?: string;
@@ -20,6 +23,7 @@ export interface PmItem {
   aaarrr: AaarrrStage[];
   owner?: string;
   raci?: Raci;
+  timeline?: string;
   flags?: Flag[];
 }
 
@@ -120,14 +124,62 @@ export const PM_PHASES: PmPhase[] = [
         id: "p0-training",
         label: "Staff Training",
         items: [
-          { id: "p0-training-1", text: "Teller and relationship-manager Moni activation training, all branches", aaarrr: ["activation"] },
-          { id: "p0-training-2", text: "Certification: each staff member demos Moni enrolment within the standard time target", aaarrr: ["activation"] },
-          { id: "p0-training-3", text: "Issue objection-handling scripts; rehearse common failure scenarios", aaarrr: ["activation"] },
-          { id: "p0-training-4", text: "Designate a Digital Champion per branch, incentivised per enrolment", aaarrr: ["activation", "acquisition"] },
-          { id: "p0-training-5", text: "Install a dedicated digital enrolment station (tablet, pre-loaded with USSD and wallet registration) at every branch front desk", aaarrr: ["acquisition", "activation"] },
-          { id: "p0-training-6", text: "Standardise and measure a short teller enrolment script used at every branch interaction", aaarrr: ["activation"] },
-          { id: "p0-training-7", text: "Launch a bank-wide staff digital-onboarding referral programme, tracked and paid monthly, distinct from the per-branch Digital Champion incentive", aaarrr: ["activation", "acquisition"] },
-          { id: "p0-training-8", text: "Stand up a digital help desk per branch for customers who hit problems going digital, so the issue is resolved in-branch before it becomes churn", aaarrr: ["retention"] },
+          {
+            id: "p0-training-1",
+            text: "Teller and relationship-manager Moni activation training, all branches",
+            aaarrr: ["activation"],
+            raci: { responsible: "Veronica & Margret", accountable: "Mary (Head FIDM)", consulted: "HR (Umu)", informed: "MD" },
+            timeline: "3 weeks (26 Oct 2026)",
+          },
+          {
+            id: "p0-training-2",
+            text: "Certification: each staff member demos Moni enrolment within the standard time target",
+            aaarrr: ["activation"],
+            raci: { responsible: "FIDM", accountable: "Mary (Head FIDM)", consulted: "HR", informed: "HR" },
+            timeline: "3 weeks (26 Oct 2026)",
+          },
+          {
+            id: "p0-training-3",
+            text: "Issue objection-handling scripts; rehearse common failure scenarios",
+            aaarrr: ["activation"],
+            raci: { responsible: "Suphian (CS)", accountable: "Suphian (CS)", consulted: "FIDM", informed: "FIDM" },
+            timeline: "3 weeks (26 Oct 2026)",
+          },
+          {
+            id: "p0-training-4",
+            text: "Designate a Digital Champion per branch, incentivised per enrolment",
+            aaarrr: ["activation", "acquisition"],
+            raci: { responsible: "Margaret", accountable: "Mary (Head FIDM)", consulted: "Mary (Head FIDM)", informed: "MD" },
+            timeline: "Ongoing",
+          },
+          {
+            id: "p0-training-5",
+            text: "Install a dedicated digital enrolment station (tablet, pre-loaded with USSD and wallet registration) at every branch front desk",
+            aaarrr: ["acquisition", "activation"],
+            raci: { responsible: "FIDM", accountable: "Mary (Head FIDM)", consulted: "MD", informed: "E-Channels" },
+            timeline: "Q1 2027",
+          },
+          {
+            id: "p0-training-6",
+            text: "Standardise and measure a short teller enrolment script used at every branch interaction",
+            aaarrr: ["activation"],
+            raci: { responsible: "FIDM", accountable: "Mary (Head FIDM)", consulted: "Branch Heads", informed: "MD" },
+            timeline: "2 Oct 2026",
+          },
+          {
+            id: "p0-training-7",
+            text: "Launch a bank-wide staff digital-onboarding referral programme, tracked and paid monthly, distinct from the per-branch Digital Champion incentive",
+            aaarrr: ["activation", "acquisition"],
+            raci: { responsible: "FIDM", accountable: "HR (Umu)", consulted: "Mary (Head FIDM)", informed: "Mary (Head FIDM)" },
+            timeline: "5 weeks (2 Nov 2026)",
+          },
+          {
+            id: "p0-training-8",
+            text: "Stand up a digital help desk per branch for customers who hit problems going digital, so the issue is resolved in-branch before it becomes churn",
+            aaarrr: ["retention"],
+            raci: { responsible: "FIDM", accountable: "FIDM", consulted: "Admin", informed: "MD" },
+            timeline: "Q1 2027",
+          },
         ],
       },
       {
@@ -167,17 +219,43 @@ export const PM_PHASES: PmPhase[] = [
             text: "Confirm the SLCB Moni and Mi Yone Teller platform readiness gate (CBS stability, onboarding and payout flow) before any field recruitment push begins",
             aaarrr: ["activation"],
             owner: "Head of E-Channels / Head Digital Banking & Financial Inclusion / Head of Retail / CIO",
+            raci: { responsible: "Alieu (Head E-Channels)", accountable: "Alieu (Head E-Channels)", consulted: "Agyeman (CIO)", informed: "FIDM" },
             flags: [{ type: "conflict", note: "Hard gate: recruitment activity in the Segment A, Segment B, and Referral Engine sections below all depend on this closing first. The source workplan itself repeats this same check twice (once as a pre-sprint verification, once as a Week 2 risk gate); consolidated here into a single item." }],
           },
-          { id: "p0-agent-1", text: "Mi Yone Teller agent trainings and certified in SLCB Moni, Osusu, Moni Savings Circle registration", aaarrr: ["acquisition", "activation"] },
-          { id: "p0-agent-2", text: "Map agent locations against Freetown market footprint and secondary-city priority", aaarrr: ["acquisition"] },
-          { id: "p0-agent-3", text: "Distribute agent branding kit (SLCB Moni QR display, branded t-shirt, signage)", aaarrr: ["awareness", "acquisition"] },
-          { id: "p0-agent-4", text: "Set a minimum monthly enrolment threshold for an agent to remain active", aaarrr: ["acquisition", "activation"] },
+          {
+            id: "p0-agent-1",
+            text: "Mi Yone Teller agent trainings and certified in SLCB Moni, Osusu, Moni Savings Circle registration",
+            aaarrr: ["acquisition", "activation"],
+            raci: { responsible: "FIDM", accountable: "Mary (Head FIDM)", consulted: "HR (Umu)", informed: "MD" },
+            timeline: "26 Oct 2026",
+          },
+          {
+            id: "p0-agent-2",
+            text: "Map agent locations against Freetown market footprint and secondary-city priority",
+            aaarrr: ["acquisition"],
+            raci: { responsible: "Alieu (Head E-Channels)", accountable: "Alieu (Head E-Channels)", consulted: "Mary (FIDM)", informed: "FIDM" },
+          },
+          {
+            id: "p0-agent-3",
+            text: "Distribute agent branding kit (SLCB Moni QR display, branded t-shirt, signage)",
+            aaarrr: ["awareness", "acquisition"],
+            raci: { responsible: "Veronica & Margaret (FIDM)", accountable: "Mary (Head FIDM)", consulted: "Mr Shittu (Director Finance)", informed: "Suphian (CS)" },
+            timeline: "26 Oct 2026",
+          },
+          {
+            id: "p0-agent-4",
+            text: "Set a minimum monthly enrolment threshold for an agent to remain active",
+            aaarrr: ["acquisition", "activation"],
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "Shittu (Director Finance)", informed: "MD" },
+            timeline: "26 Oct 2026",
+          },
           {
             id: "p0-agent-5",
             text: "Confirm the current live agent baseline (count and geographic distribution) before the recruitment sprint begins",
             aaarrr: ["acquisition"],
             owner: "Head of E-Channels",
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "ICT Team", informed: "Alieu (Head E-Channels)" },
+            timeline: "2 Oct 2026",
             flags: [{ type: "conflict", note: "The source's own KPI Framework notes that three internal SLCB documents give differing overall agent-count targets. Not resolved here and no figures shown, consistent with this tab's standing rule; reconcile before communicating any external commitment on agent numbers. The Digital Literacy 50K programme strategy corroborates this same conflict, naming two of the three documents by title without adding a fourth figure." }],
           },
         ],
@@ -186,37 +264,120 @@ export const PM_PHASES: PmPhase[] = [
         id: "p0-agent-segment-a",
         label: "Agent Recruitment: Segment A (Convert Competitor Agents)",
         items: [
-          { id: "p0-agent-a1", text: "Source current published competitor mobile-money commission rates to build the Segment A comparison sheet", aaarrr: ["acquisition"], owner: "Digital Strategy Consultant / Integra" },
-          { id: "p0-agent-a2", text: "Record peer-testimonial audio of actual commission paid, non-literate-friendly, no fabricated figures", aaarrr: ["acquisition", "awareness"], owner: "Field Officers / Provincial Coordinators" },
-          { id: "p0-agent-a3", text: "Reframe the field script around addition-not-replacement positioning; never counter-argue a competitor's value, no exclusivity ask", aaarrr: ["acquisition"], owner: "Agent Network Coordinators" },
-          { id: "p0-agent-a4", text: "Produce a dual-channel onboarding pack: a pictogram flow for non-literate agents alongside the written comparison sheet for literate agents", aaarrr: ["acquisition", "activation"], owner: "Digital Squad / Graphic Designer" },
-          { id: "p0-agent-a5", text: "Deploy founding-agent urgency messaging ahead of the scheduled commission-split change at Moni go-live", aaarrr: ["acquisition"], owner: "Agent Network Coordinators" },
+          {
+            id: "p0-agent-a1",
+            text: "Source current published competitor mobile-money commission rates to build the Segment A comparison sheet",
+            aaarrr: ["acquisition"],
+            owner: "Digital Strategy Consultant / Integra",
+            raci: { responsible: "FIDM Team", accountable: "FIDM Team", consulted: "Mary (Head FIDM)", informed: "Digital Consultant Integra" },
+            timeline: "Done",
+          },
+          {
+            id: "p0-agent-a2",
+            text: "Record peer-testimonial audio of actual commission paid, non-literate-friendly, no fabricated figures",
+            aaarrr: ["acquisition", "awareness"],
+            owner: "Field Officers / Provincial Coordinators",
+            raci: { responsible: "Precious (Under 30s CEO)", accountable: "Suphian (CS)", consulted: "FIDM Team", informed: "Mary (Head FIDM)" },
+            timeline: "9 Nov 2026",
+          },
+          {
+            id: "p0-agent-a3",
+            text: "Reframe the field script around addition-not-replacement positioning; never counter-argue a competitor's value, no exclusivity ask",
+            aaarrr: ["acquisition"],
+            owner: "Agent Network Coordinators",
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "Mary (Head FIDM)", informed: "MD" },
+            timeline: "26 Oct 2026",
+          },
+          {
+            id: "p0-agent-a4",
+            text: "Produce a dual-channel onboarding pack: a pictogram flow for non-literate agents alongside the written comparison sheet for literate agents",
+            aaarrr: ["acquisition", "activation"],
+            owner: "Digital Squad / Graphic Designer",
+            raci: { responsible: "Suphian (CS)", accountable: "CS Team", consulted: "FIDM Team", informed: "Mary (Head FIDM)" },
+            timeline: "13 Oct 2026",
+          },
+          {
+            id: "p0-agent-a5",
+            text: "Deploy founding-agent urgency messaging ahead of the scheduled commission-split change at Moni go-live",
+            aaarrr: ["acquisition"],
+            owner: "Agent Network Coordinators",
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "Suphian (CS)", informed: "E-Channels" },
+            timeline: "5 Oct 2026",
+          },
         ],
       },
       {
         id: "p0-agent-segment-b",
         label: "Agent Recruitment: Segment B (New Agents & Jobseekers)",
         items: [
-          { id: "p0-agent-b1", text: "Identify market-day, church/mosque, and youth-association recruitment venues, Bo/Kenema/Makeni/Port Loko first", aaarrr: ["acquisition"], owner: "Provincial Field Officers" },
-          { id: "p0-agent-b2", text: "Prepare visible-kit recruitment materials: branded kit and ID shown before any commission conversation", aaarrr: ["acquisition", "awareness"], owner: "Creative Director / Digital Squad" },
-          { id: "p0-agent-b3", text: "Run community-network activations at market days and through PTA/mosque/church networks", aaarrr: ["acquisition"], owner: "Provincial Field Officers / Activation Manager" },
-          { id: "p0-agent-b4", text: "Onboard new agents: training, float support for the first 30 days, and branded terminal/SIM issuance", aaarrr: ["acquisition", "activation"], owner: "Field Officers (2 per province)" },
+          {
+            id: "p0-agent-b1",
+            text: "Identify market-day, church/mosque, and youth-association recruitment venues, Bo/Kenema/Makeni/Port Loko first",
+            aaarrr: ["acquisition"],
+            owner: "Provincial Field Officers",
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "Head HR (Umu)", informed: "MD" },
+            timeline: "26 Oct 2026",
+          },
+          {
+            id: "p0-agent-b2",
+            text: "Prepare visible-kit recruitment materials: branded kit and ID shown before any commission conversation",
+            aaarrr: ["acquisition", "awareness"],
+            owner: "Creative Director / Digital Squad",
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "CS Team", informed: "Director Finance" },
+            timeline: "15 Oct 2026",
+          },
+          {
+            id: "p0-agent-b3",
+            text: "Run community-network activations at market days and through PTA/mosque/church networks",
+            aaarrr: ["acquisition"],
+            owner: "Provincial Field Officers / Activation Manager",
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "Shittu (Director Finance)", informed: "MD" },
+            timeline: "Ongoing",
+          },
+          {
+            id: "p0-agent-b4",
+            text: "Onboard new agents: training, float support for the first 30 days, and branded terminal/SIM issuance",
+            aaarrr: ["acquisition", "activation"],
+            owner: "Field Officers (2 per province)",
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "Shittu (Director Finance)", informed: "MD" },
+            timeline: "30 Nov 2026",
+          },
         ],
       },
       {
         id: "p0-agent-referral",
         label: "Agent Referral Engine (Segment C)",
         items: [
-          { id: "p0-agent-c1", text: "Script a named-referral ask into onboarding, first-payout, and monthly-review moments", aaarrr: ["referral"], owner: "Agent Network Coordinators" },
-          { id: "p0-agent-c2", text: "Open a referral tracker on the shared operations dashboard alongside the agent-location mapping tool", aaarrr: ["referral", "retention"], owner: "Data Analyst / Integra" },
+          {
+            id: "p0-agent-c1",
+            text: "Script a named-referral ask into onboarding, first-payout, and monthly-review moments",
+            aaarrr: ["referral"],
+            owner: "Agent Network Coordinators",
+            raci: { responsible: "CS Team", accountable: "Suphian (CS)", consulted: "FIDM Team", informed: "FIDM Team" },
+          },
+          {
+            id: "p0-agent-c2",
+            text: "Open a referral tracker on the shared operations dashboard alongside the agent-location mapping tool",
+            aaarrr: ["referral", "retention"],
+            owner: "Data Analyst / Integra",
+            raci: { responsible: "Alieu (E-Channels)", accountable: "E-Channels Team", consulted: "FIDM Team", informed: "Mary (Head FIDM)" },
+          },
           {
             id: "p0-agent-c3",
             text: "Confirm the referral bonus structure (two-tier: logged referral plus converted agent) with CFO before finalising the mechanic",
             aaarrr: ["referral"],
             owner: "CFO / Head of Digital Banking",
-            flags: [{ type: "data-required", note: "No verified programme budget figure exists yet for the referral bonus amount, per the source's own risk log; the mechanic cannot be communicated to agents until this is confirmed." }],
+            raci: { responsible: "Finance Team", accountable: "Finance Team", consulted: "FIDM Team", informed: "Mary (Head FIDM) & Shittu (Director Finance)" },
+            timeline: "Done",
           },
-          { id: "p0-agent-c4", text: "Apply a non-performer guardrail: forfeit the referral reward if the referred agent lands in the bottom-performer band within 60 days", aaarrr: ["referral", "retention"], owner: "Agent Network Coordinators" },
+          {
+            id: "p0-agent-c4",
+            text: "Apply a non-performer guardrail: forfeit the referral reward if the referred agent lands in the bottom-performer band within 60 days",
+            aaarrr: ["referral", "retention"],
+            owner: "Agent Network Coordinators",
+            raci: { responsible: "FIDM Team", accountable: "Mary (Head FIDM)", consulted: "Alieu (E-Channels)", informed: "MD" },
+            timeline: "Ongoing",
+          },
         ],
       },
       {
