@@ -85,6 +85,54 @@ export const RISKS: Risk[] = [
     impact: "No verified programme budget figure exists for the referral bonus; the mechanic cannot be finalized or communicated to agents without one.",
     mitigation: "Confirm the bonus quantum with the CFO and Head of Digital Banking before finalizing the mechanic. Owner: CFO.",
   },
+  {
+    id: "risk-15",
+    risk: "Merchant QR App Late (Merchant Gate 2)",
+    impact: "Regional merchant storms cannot scale without QR acceptance, and the existing merchant payment function currently shows no payment volume.",
+    mitigation: "Keep the Freetown pilot on the existing merchant payment function and hold regional storms until QR acceptance is live. Owner: Head of E-Channels.",
+  },
+  {
+    id: "risk-16",
+    risk: "Merchant Cash-Out Not Working (Merchant Gate 3)",
+    impact: "Merchants will not accept payments they cannot cash out, and cash-in and cash-out are listed as inactive features in the latest Moni usage report.",
+    mitigation: "Stop new storms near any market with cash-out complaints and fix agent float first. Owner: Head of E-Channels and FIDM.",
+  },
+  {
+    id: "risk-17",
+    risk: "Slow Merchant Authorisation (Merchant Gate 4)",
+    impact: "Merchants are not live on the day, which breaks the 15-minute onboarding promise made in the field.",
+    mitigation: "Pre-register merchants the day before a storm and agree a same-day authorisation desk with Operations. Owner: Compliance & Regulatory Lead.",
+  },
+  {
+    id: "risk-18",
+    risk: "Merchant Fee Model Not Approved (Merchant Gate 5)",
+    impact: "No fee waiver, free kit or other incentive can be promised, which weakens the field pitch.",
+    mitigation: "Pitch without incentives until the fee model is approved in writing. Owner: SLCB MD / Exco.",
+  },
+  {
+    id: "risk-19",
+    risk: "Fake or Inactive Merchant Sign-Ups",
+    impact: "Squads counted on sign-ups can create merchants that never take a genuine payment, inflating onboarded numbers while active merchants stay flat.",
+    mitigation: "Pay squads on merchant activation, not sign-up, and spot-check a sample of newly onboarded merchants. Owner: Head of Agent & Merchant Acquisition.",
+  },
+  {
+    id: "risk-20",
+    risk: "Low Customer-Side Adoption Around Live Merchants",
+    impact: "A merchant with no paying customers nearby earns SLCB nothing and goes dormant, however well the onboarding went.",
+    mitigation: "Open customer wallets around every live stall and run customer offers once approved. Owner: Head of Growth Marketing.",
+  },
+  {
+    id: "risk-21",
+    risk: "Retired Brand Line Reaching Print",
+    impact: "The retired platform name appears on two merchant kit specs and is blocking branch exterior signage; printing it would force a reprint.",
+    mitigation: "Replace the copy on every spec and hold all affected print runs until the replacement platform name is confirmed. Owner: Creative Director.",
+  },
+  {
+    id: "risk-22",
+    risk: "Compressed Creative Schedule",
+    impact: "The Creative Director's tracker allows about a day and a half for the brand book after logo approval, and about three weeks for the full campaign creative. Every day a sign-off takes pushes every later date by one day.",
+    mitigation: "Consider a longer first week if the brand book is extensive. For a shorter version, drop the extended items first, run copywriting alongside the hero and ecosystem work, and cut to one creative route. Owner: Creative Director.",
+  },
 ];
 
 export const ASSUMPTIONS: Assumption[] = [
@@ -200,6 +248,45 @@ export const ASSUMPTIONS: Assumption[] = [
     description:
       "The cascade training deck and the promotional strategy analysis name different total branch counts, without a reconciled figure between them.",
     implication: "Confirm the correct branch count with SLCB before finalizing the branch-teller share of the digital-literacy delivery plan.",
+    unresolved: true,
+  },
+  {
+    id: "assum-17",
+    name: "Merchant Headline Definitions and Thresholds",
+    description:
+      "The merchant playbook leads with active merchants, defined as a genuine customer payment in the last 30 days. The day-7 at-risk and day-30 dormant thresholds, the planning active rate, the monthly phasing, the route shares and the regional shares are all assumed, not sourced.",
+    implication: "Replace each with pilot behaviour data at the Month 3 review before any target is communicated outside the programme.",
+    unresolved: true,
+  },
+  {
+    id: "assum-18",
+    name: "Merchant Field Capacity and Headcount",
+    description:
+      "The number of squads, SME bankers and Tier 1 relationship managers, and the field-day yields behind them, are planning assumptions. Headcount available from HR has not been supplied.",
+    implication: "Confirm headcount with HR and replace the yields with pilot squad timesheets before recruitment is approved.",
+    unresolved: true,
+  },
+  {
+    id: "assum-19",
+    name: "Market-by-Market Trader Counts",
+    description:
+      "Trader counts by market and district, and each market's local leadership structure and titles, are not yet supplied by the regional managers.",
+    implication: "Collect these before regional allocation is fixed and before any market association protocol meeting.",
+    unresolved: true,
+  },
+  {
+    id: "assum-20",
+    name: "Merchant POSM Unit Costs and Lead Times",
+    description: "Unit costs and lead times for the Tier 1, Tier 2 and Tier 3 merchant kits have not been supplied by the merchandising and POSM owner.",
+    implication: "Confirm both before the bulk Tier 3 kit order is placed ahead of the regional launch.",
+    unresolved: true,
+  },
+  {
+    id: "assum-21",
+    name: "Creative Tracker Start Date, Turnaround and Production Dates",
+    description:
+      "The Creative Director's tracker assumes a 5 Oct 2026 start (flagged as a placeholder in the tracker) and client turnaround within 24 hours at each approval gate. It does not schedule production (shoots, recording and edits); the review row is a placeholder.",
+    implication: "Confirm the start date and sign-off turnaround, and add real production dates to the tracker as shoots and edits are scheduled.",
     unresolved: true,
   },
 ];

@@ -446,3 +446,69 @@ rather than a new top-level one.
   Management sections are referenced in exactly one Sequencing wave, no duplicates, no gaps.
 - **Gantt/Matrix tab deliberately not touched**, for the same reason as the ninth source above: this
   document originates from the Digital Strategy Consultant, not the Execution Partner.
+
+## Eleventh to thirteenth sources (Project Charter, Sequencing, Risks & Assumptions tabs, added 2026-10-04)
+
+`Creatives to Produce.pdf` (the Creative Deliverables Scope, already used as the ninth source),
+`SLCB Moni Project Tracker - Creative Director.xlsx` (the Creative Director's 6-week plan: logo and
+brand book, campaign creative, app UI), and `SLCB_Moni_Merchant_Acquisition_Playbook.pptx` (66
+slides, iNTEGRA Sys Limited, version 1.0, 30 September 2026). Requested outcome: add the merchant
+plan, and simplify creative production so each item to be produced can be walked through one line at
+a time.
+
+**Creative Production restructured, not just extended.** The old 13-item Creative Production
+section (bundled suites, owned by an "Execution Partner") was replaced by a standalone
+"Creative Production" group of 10 sections, in production order. Creative 1 to 3 follow the Creative
+Director's tracker (brand identity and toolkit, campaign idea and messaging, creative direction and
+sign-off, with its eight approval gates as HARD GATE items). Creative 4 to 8 list the Creative
+Deliverables Scope one row per line (ATL 14, BTL 15, TTL 11, Digital 20, Foundational 12), so every
+row of the PDF can be ticked off. Creative 9 holds the merchant kits and content from the merchant
+playbook; Creative 10 holds the app UI work from the tracker. The earlier bundling was a deliberate
+choice for brevity; it is reversed here because the request was to walk through each item.
+
+- **Recommended additions** in the scope (wall mural, photo-booth frame, corporate gifting, wayfinding
+  signage, stationery, staff ID and lanyard, vehicle livery, landing page, in-app copy, IVR scripts,
+  influencer brief, paid social variation set) are kept as their own lines flagged `uzo-to-confirm`,
+  since the source says each needs SLCB Marketing confirmation. Delete any that are not needed.
+- **Timelines** shown on creative lines are the Creative Director's tracker dates (end date of each
+  task or gate). The tracker itself marks its 5 Oct 2026 start as a placeholder, assumes client
+  turnaround within 24 hours at every gate, and does not schedule production (shoots, recording,
+  edits). All three points are flagged on the items and carried into Assumptions (`assum-21`).
+- **Execution Partner removed from this tab.** Per the earlier decision not to hire one, every
+  "Execution Partner" owner in the Project Charter now reads "Creative Director". Nothing else in
+  those items changed. The Gantt and Matrix tabs are untouched: they restate the original BTV scope.
+- **Palette conflict kept** (`cr-id-5`) and the retired brand line hold kept (`cr-id-9`), now also
+  covering the two merchant kit specs the playbook found carrying the retired line (`cr-mer-12`).
+
+**Merchant Acquisition added as a cross-cutting group** (like Digital Paid Media), 16 sections and
+88 items, placed before Phase 2. It absorbs the old five-item Phase 3 "Merchant QR Expansion"
+section, whose content is fully covered (tiers, zero-fee incentive, platform partners).
+
+- **What passed the execution filter:** the five launch gates and the regional-storm rule; programme
+  setup (headline definitions, squads, tracker, market mapping, authorisation desk); training and
+  certification; cash-out liquidity; trust, fraud and complaint controls; the incentive proposals; the
+  Freetown pilot; Tier 3 market storms and the market association protocol; Tier 2 and Tier 1
+  playbooks; marketing and content deployment; the day 0 to 30 activation journey, dormancy and
+  win-back; scorecard and reporting rhythm; regional scale; partners and value-added services; and
+  close-out.
+- **Excluded per the standing rules:** the 25,000 target and every tier, monthly, regional, route and
+  capacity figure; the active-rate cases; the Disruption brief, behavioural science table and
+  council or dissent material (strategy rationale, not execution); and the playbook's own RACI, whose
+  role titles come from a simulated council roster and are marked assumed, so owners are left TBC
+  except where the role matches a real SLCB role (Head of E-Channels, FIDM, MD / Exco, HR).
+- **Incentives** carry `data-required` flags marked pending approval, because none can be promised
+  before Gate 5 (fee model) closes. No new flag type was added.
+- **Conflict surfaced:** the playbook's own council disagreed on paying market association leaders;
+  kept as a HARD GATE requiring a written Compliance rule.
+- **Overlap flagged:** merchant 'Suad Di Market' content overlaps the existing ambassador activation
+  (`mq-mkt-3`, `uzo-to-confirm`).
+
+**Bug fixed:** `p1-dl-7` (hold congregation sessions until go-live) had an empty AAARRR list, which
+made it invisible in the Project Charter tab even though Sequencing counted it. It is now tagged
+activation and displays.
+
+**Sequencing:** 73 sections, each in exactly one wave. `cr-identity` joins Wave 1; the other creative
+sections replace `p0-creative` in Wave 2; merchant readiness sections join Wave 3; the pilot and field
+methods join Wave 5; activation and scorecard join Wave 6; regional scale and partners replace
+`p3-merchant` in Wave 7; close-out joins Wave 8. **Risks & Assumptions:** risks 15 to 22 (five merchant
+gate and sign-up risks, retired brand line, compressed creative schedule) and assumptions 17 to 21.
