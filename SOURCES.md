@@ -512,3 +512,23 @@ sections replace `p0-creative` in Wave 2; merchant readiness sections join Wave 
 methods join Wave 5; activation and scorecard join Wave 6; regional scale and partners replace
 `p3-merchant` in Wave 7; close-out joins Wave 8. **Risks & Assumptions:** risks 15 to 22 (five merchant
 gate and sign-up risks, retired brand line, compressed creative schedule) and assumptions 17 to 21.
+
+## Fourteenth source (Project Charter, added 2026-10-05)
+
+`SLCB Moni Wallet RACI.docx` ("Corporate Secretariat RACI"): names and delivery dates for Internal
+Comms, Cultural & Copy Validation, selected agent items, and Creative Production. 87 line items
+updated. The document uses the original bundled wording, so it was mapped onto the current lines:
+the five creative suites (ATL, BTL, TTL, Digital, Foundational) apply to every line in their
+Creative Production section except lines that have their own entry (radio spot recording, the
+content calendars, in-branch POS materials). Normalisations: "Team CS" to "CS Team", "Team SC" (read as
+a typo for CS) to "CS Team", "Head FIDM" to "Mary (Head FIDM)", "Under 30s CEO" to the earlier
+"Precious (Under 30s CEO)", "Finance Director" to "Director Finance", "Suphian" to "Suphian (CS)".
+"DCS" is kept as written.
+
+- **Overrides of earlier entries** (the newer document wins): the Segment A testimonial audio item
+  moves from 9 Nov to 5 Oct 2026 with new R, A and I; the dual-channel onboarding pack and agent
+  branding kit RACI are replaced. The branding kit's blank timeline keeps the earlier 26 Oct 2026.
+- **Language scope:** the consultant engagement line now reads Krio-Temne-Mende-Limba-Fullah, as in
+  the document. Other cultural validation lines still read Krio-Temne-Mende.
+- **Master Brand Toolkit:** "Handle by Uzo" is entered as Responsible and Accountable. Its 13 / 22 Oct
+  date clashes with the tracker's 9 Oct brand book gate, flagged `uzo-to-confirm` on the item.
